@@ -1,0 +1,51 @@
+{
+  "stage": "clean_columns",
+  "status": "success",
+  "result": {
+    "input_path": "artifacts/data_preparation/intermediate/02_features.csv",
+    "output_path": "artifacts/data_preparation/intermediate/03_cleaned.csv",
+    "target_column": "price",
+    "dropped_columns": [
+      {
+        "name": "id",
+        "reason": "ID column not useful for modeling."
+      },
+      {
+        "name": "host_since",
+        "reason": "Raw datetime column replaced by derived features."
+      },
+      {
+        "name": "first_review",
+        "reason": "Raw datetime column replaced by derived features."
+      },
+      {
+        "name": "last_review",
+        "reason": "Raw datetime column replaced by derived features."
+      },
+      {
+        "name": "description",
+        "reason": "Raw text column replaced by derived features."
+      },
+      {
+        "name": "amenities",
+        "reason": "Raw text column replaced by derived features."
+      },
+      {
+        "name": "host_location",
+        "reason": "High cardinality categorical column (1935 unique values)."
+      },
+      {
+        "name": "host_acceptance_rate",
+        "reason": "High cardinality categorical column (101 unique values)."
+      },
+      {
+        "name": "city",
+        "reason": "High cardinality categorical column (108 unique values)."
+      }
+    ],
+    "kept_columns_notes": [
+      "Remaining columns: 33"
+    ],
+    "warnings": []
+  }
+}

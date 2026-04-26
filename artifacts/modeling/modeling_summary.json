@@ -1,0 +1,97 @@
+{
+  "status": "success",
+  "task_type": "regression",
+  "target_column": "price",
+  "prepared_dataset_path": "artifacts/data_preparation/prepared_dataset.csv",
+  "models_tested": [
+    "Ridge",
+    "RandomForestRegressor"
+  ],
+  "best_model_name": "RandomForestRegressor",
+  "best_model_path": "artifacts/modeling/best_model.joblib",
+  "best_metrics": {
+    "mae": 80.23556942277304,
+    "rmse": 128.72369013611674,
+    "r2": 0.5942013665404381
+  },
+  "tuning_used": true,
+  "best_params": {
+    "max_depth": null,
+    "min_samples_split": 5,
+    "n_estimators": 100
+  },
+  "baseline_best_metrics": {
+    "mae": 85.19904739917976,
+    "rmse": 135.34131206179373,
+    "r2": 0.5514050476171387
+  },
+  "tuned_metrics": {
+    "mae": 80.23556942277304,
+    "rmse": 128.72369013611674,
+    "r2": 0.5942013665404381
+  },
+  "model_comparison": {
+    "best_job_id": "model_2",
+    "best_model_name": "RandomForestRegressor",
+    "best_model_path": "artifacts/modeling/models/model_2_RandomForestRegressor.joblib",
+    "best_metrics": {
+      "mae": 85.19904739917976,
+      "rmse": 135.34131206179373,
+      "r2": 0.5514050476171387
+    },
+    "primary_metric": "rmse",
+    "direction": "lower_is_better",
+    "all_results": [
+      {
+        "job_id": "model_1",
+        "model_name": "Ridge",
+        "task_type": "regression",
+        "model_artifact_path": "artifacts/modeling/models/model_1_Ridge.joblib",
+        "metrics_path": "artifacts/modeling/metrics/model_1_Ridge_metrics.json",
+        "metrics": {
+          "mae": 113.8086238333974,
+          "rmse": 174.11527002218065,
+          "r2": 0.2575497819787401
+        },
+        "n_train": 12000,
+        "n_test": 3000,
+        "warnings": [],
+        "status": "success"
+      },
+      {
+        "job_id": "model_2",
+        "model_name": "RandomForestRegressor",
+        "task_type": "regression",
+        "model_artifact_path": "artifacts/modeling/models/model_2_RandomForestRegressor.joblib",
+        "metrics_path": "artifacts/modeling/metrics/model_2_RandomForestRegressor_metrics.json",
+        "metrics": {
+          "mae": 85.19904739917976,
+          "rmse": 135.34131206179373,
+          "r2": 0.5514050476171387
+        },
+        "n_train": 12000,
+        "n_test": 3000,
+        "warnings": [],
+        "status": "success"
+      }
+    ]
+  },
+  "tuning_result": {
+    "best_model_name": "RandomForestRegressor",
+    "tuned_model_path": "artifacts/modeling/tuned_models/tuned_RandomForestRegressor.joblib",
+    "tuned_metrics_path": "artifacts/modeling/tuned_models/tuned_RandomForestRegressor_metrics.json",
+    "best_params": {
+      "max_depth": null,
+      "min_samples_split": 5,
+      "n_estimators": 100
+    },
+    "metrics": {
+      "mae": 80.23556942277304,
+      "rmse": 128.72369013611674,
+      "r2": 0.5942013665404381
+    },
+    "n_train": 12000,
+    "n_test": 3000,
+    "warnings": []
+  }
+}

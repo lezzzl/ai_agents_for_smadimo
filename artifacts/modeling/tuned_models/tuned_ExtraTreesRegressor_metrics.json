@@ -1,0 +1,1 @@
+{"best_params": {"max_depth": null, "min_samples_split": 5, "n_estimators": 100}, "metrics": {"mae": 82.3230311111111, "rmse": 131.3204352750275, "r2": 0.5776638613991942}, "n_train": 12000, "n_test": 3000}

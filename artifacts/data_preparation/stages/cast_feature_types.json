@@ -1,0 +1,61 @@
+{
+  "stage": "cast_feature_types",
+  "status": "success",
+  "result": {
+    "input_path": "./rent_predictions/airbnb_train_fe_15000.csv",
+    "output_path": "artifacts/data_preparation/intermediate/01_casted.csv",
+    "target_column": "price",
+    "task_type": "regression",
+    "converted_columns": {
+      "numeric": [
+        "accommodates",
+        "bathrooms",
+        "bedrooms",
+        "beds",
+        "host_listings_count",
+        "host_total_listings_count",
+        "latitude",
+        "longitude",
+        "availability_30",
+        "availability_60",
+        "availability_90",
+        "availability_365",
+        "number_of_reviews",
+        "number_of_reviews_ltm",
+        "number_of_reviews_l30d",
+        "review_scores_rating",
+        "review_scores_cleanliness",
+        "review_scores_location",
+        "review_scores_value",
+        "reviews_per_month"
+      ],
+      "datetime": [
+        "host_since",
+        "first_review",
+        "last_review"
+      ],
+      "categorical": [
+        "property_type",
+        "room_type",
+        "host_location",
+        "host_response_time",
+        "host_response_rate",
+        "host_acceptance_rate",
+        "city"
+      ],
+      "text": [
+        "description",
+        "amenities"
+      ],
+      "boolean_like": [
+        "host_is_superhost",
+        "has_availability"
+      ],
+      "target": [
+        "price"
+      ]
+    },
+    "skipped_columns": [],
+    "warnings": []
+  }
+}

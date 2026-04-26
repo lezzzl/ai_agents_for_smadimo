@@ -1,0 +1,57 @@
+{
+  "stage": "create_new_features",
+  "status": "success",
+  "result": {
+    "input_path": "artifacts/data_preparation/intermediate/01_casted.csv",
+    "output_path": "artifacts/data_preparation/intermediate/02_features.csv",
+    "target_column": "price",
+    "created_features": [
+      {
+        "name": "beds_per_bedroom",
+        "source_columns": [
+          "beds",
+          "bedrooms"
+        ],
+        "reason": "Indicates density of sleeping arrangements relative to rooms."
+      },
+      {
+        "name": "amenities_count",
+        "source_columns": [
+          "amenities"
+        ],
+        "reason": "Total number of amenities offered can influence price."
+      },
+      {
+        "name": "host_tenure_days",
+        "source_columns": [
+          "host_since"
+        ],
+        "reason": "Experienced hosts might price differently."
+      },
+      {
+        "name": "availability_30_ratio",
+        "source_columns": [
+          "availability_30"
+        ],
+        "reason": "Normalized short-term availability indicator."
+      },
+      {
+        "name": "review_span_days",
+        "source_columns": [
+          "first_review",
+          "last_review"
+        ],
+        "reason": "Duration the listing has been active and receiving reviews."
+      },
+      {
+        "name": "description_length",
+        "source_columns": [
+          "description"
+        ],
+        "reason": "Detailed descriptions might correlate with higher quality or professional management."
+      }
+    ],
+    "skipped_features": [],
+    "warnings": []
+  }
+}

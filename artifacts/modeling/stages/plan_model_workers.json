@@ -1,0 +1,25 @@
+{
+  "stage": "plan_model_workers",
+  "status": "success",
+  "result": {
+    "task_type": "regression",
+    "target_column": "price",
+    "prepared_dataset_path": "artifacts/data_preparation/prepared_dataset.csv",
+    "model_jobs": [
+      {
+        "job_id": "model_1",
+        "model_name": "Ridge",
+        "model_type": "linear",
+        "reason": "stable linear baseline model"
+      },
+      {
+        "job_id": "model_2",
+        "model_name": "RandomForestRegressor",
+        "model_type": "ensemble",
+        "reason": "non-linear ensemble model"
+      }
+    ],
+    "primary_metric": "rmse",
+    "selection_rule": "lower RMSE is better for regression"
+  }
+}

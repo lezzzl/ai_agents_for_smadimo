@@ -1,0 +1,68 @@
+{
+  "stage": "schema_detection",
+  "status": "success",
+  "result": {
+    "target_column": "price",
+    "task_type": "regression",
+    "schema": {
+      "numeric": [
+        "accommodates",
+        "bathrooms",
+        "bedrooms",
+        "beds",
+        "host_listings_count",
+        "host_total_listings_count",
+        "latitude",
+        "longitude",
+        "availability_30",
+        "availability_60",
+        "availability_90",
+        "availability_365",
+        "number_of_reviews",
+        "number_of_reviews_ltm",
+        "number_of_reviews_l30d",
+        "review_scores_rating",
+        "review_scores_cleanliness",
+        "review_scores_location",
+        "review_scores_value",
+        "reviews_per_month"
+      ],
+      "categorical": [
+        "property_type",
+        "room_type",
+        "host_location",
+        "host_response_time",
+        "host_response_rate",
+        "host_acceptance_rate",
+        "city"
+      ],
+      "text": [
+        "description",
+        "amenities"
+      ],
+      "datetime": [
+        "host_since",
+        "first_review",
+        "last_review"
+      ],
+      "boolean_like": [
+        "host_is_superhost",
+        "has_availability"
+      ],
+      "id": [
+        "id"
+      ],
+      "target": [
+        "price"
+      ]
+    },
+    "schema_notes": [
+      "id is the primary identifier.",
+      "description and amenities are long-form text or lists and classified as text.",
+      "host_since, first_review, and last_review are date-formatted strings.",
+      "host_is_superhost and has_availability are binary flags (t/f).",
+      "host_response_rate and host_acceptance_rate are percentages stored as strings.",
+      "price is the continuous target variable for regression."
+    ]
+  }
+}

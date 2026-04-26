@@ -1,0 +1,12 @@
+{
+  "stage": "statistics",
+  "status": "success",
+  "result": {
+    "numeric_columns_count": 20,
+    "categorical_columns_count": 7,
+    "text_columns_count": 2,
+    "datetime_columns_count": 3,
+    "target_column": "price",
+    "statistics_note": "Detailed statistics were calculated for EDA stage."
+  }
+}

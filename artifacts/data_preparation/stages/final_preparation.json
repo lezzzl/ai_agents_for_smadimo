@@ -1,0 +1,19 @@
+{
+  "stage": "final_preparation",
+  "status": "success",
+  "result": {
+    "input_path": "artifacts/data_preparation/intermediate/05_encoded_scaled.csv",
+    "output_path": "artifacts/data_preparation/prepared_dataset.csv",
+    "summary_path": "artifacts/data_preparation/data_preparation_summary.json",
+    "target_column": "price",
+    "task_type": "regression",
+    "final_shape": [
+      205,
+      66
+    ],
+    "n_features": 65,
+    "non_numeric_feature_columns": [],
+    "missing_values_total": 0,
+    "warnings": []
+  }
+}

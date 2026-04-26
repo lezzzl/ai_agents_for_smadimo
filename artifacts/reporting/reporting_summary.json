@@ -1,0 +1,1 @@
+{"project_name": "Airbnb Price Prediction", "best_model": "RandomForestRegressor", "r2_score": 0.5942013665404381, "mae": 80.23556942277304, "report_path": "artifacts/reporting/final_report.md"}
