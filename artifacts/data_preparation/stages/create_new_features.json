@@ -12,43 +12,42 @@
           "beds",
           "bedrooms"
         ],
-        "reason": "Indicates density of sleeping arrangements relative to rooms."
+        "reason": "Density of sleeping places per room"
       },
       {
         "name": "amenities_count",
         "source_columns": [
           "amenities"
         ],
-        "reason": "Total number of amenities offered can influence price."
+        "reason": "Total number of amenities offered"
       },
       {
         "name": "host_tenure_days",
         "source_columns": [
           "host_since"
         ],
-        "reason": "Experienced hosts might price differently."
+        "reason": "Number of days the host has been on the platform"
+      },
+      {
+        "name": "description_len",
+        "source_columns": [
+          "description"
+        ],
+        "reason": "Length of the property description"
       },
       {
         "name": "availability_30_ratio",
         "source_columns": [
           "availability_30"
         ],
-        "reason": "Normalized short-term availability indicator."
+        "reason": "Proportion of time available in the next 30 days"
       },
       {
-        "name": "review_span_days",
+        "name": "days_since_last_review",
         "source_columns": [
-          "first_review",
           "last_review"
         ],
-        "reason": "Duration the listing has been active and receiving reviews."
-      },
-      {
-        "name": "description_length",
-        "source_columns": [
-          "description"
-        ],
-        "reason": "Detailed descriptions might correlate with higher quality or professional management."
+        "reason": "Recency of the last review"
       }
     ],
     "skipped_features": [],

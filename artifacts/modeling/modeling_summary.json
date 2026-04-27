@@ -10,37 +10,38 @@
   "best_model_name": "RandomForestRegressor",
   "best_model_path": "artifacts/modeling/best_model.joblib",
   "best_metrics": {
-    "mae": 80.23556942277304,
-    "rmse": 128.72369013611674,
-    "r2": 0.5942013665404381
+    "mae": 79.41009644081709,
+    "rmse": 127.65721095960528,
+    "r2": 0.6008976166641524
   },
   "tuning_used": true,
   "best_params": {
     "max_depth": null,
+    "min_samples_leaf": 2,
     "min_samples_split": 5,
-    "n_estimators": 100
+    "n_estimators": 200
   },
   "baseline_best_metrics": {
-    "mae": 85.19904739917976,
-    "rmse": 135.34131206179373,
-    "r2": 0.5514050476171387
+    "mae": 80.12066,
+    "rmse": 128.421690724737,
+    "r2": 0.5961032260903201
   },
   "tuned_metrics": {
-    "mae": 80.23556942277304,
-    "rmse": 128.72369013611674,
-    "r2": 0.5942013665404381
+    "mae": 79.41009644081709,
+    "rmse": 127.65721095960528,
+    "r2": 0.6008976166641524
   },
   "model_comparison": {
     "best_job_id": "model_2",
     "best_model_name": "RandomForestRegressor",
     "best_model_path": "artifacts/modeling/models/model_2_RandomForestRegressor.joblib",
     "best_metrics": {
-      "mae": 85.19904739917976,
-      "rmse": 135.34131206179373,
-      "r2": 0.5514050476171387
+      "mae": 80.12066,
+      "rmse": 128.421690724737,
+      "r2": 0.5961032260903201
     },
     "primary_metric": "rmse",
-    "direction": "lower_is_better",
+    "reason": "Model RandomForestRegressor has the lowest RMSE: 128.421690724737",
     "all_results": [
       {
         "job_id": "model_1",
@@ -49,9 +50,9 @@
         "model_artifact_path": "artifacts/modeling/models/model_1_Ridge.joblib",
         "metrics_path": "artifacts/modeling/metrics/model_1_Ridge_metrics.json",
         "metrics": {
-          "mae": 113.8086238333974,
-          "rmse": 174.11527002218065,
-          "r2": 0.2575497819787401
+          "mae": 113.81925495369431,
+          "rmse": 174.13615740516303,
+          "r2": 0.2573716382440696
         },
         "n_train": 12000,
         "n_test": 3000,
@@ -65,9 +66,9 @@
         "model_artifact_path": "artifacts/modeling/models/model_2_RandomForestRegressor.joblib",
         "metrics_path": "artifacts/modeling/metrics/model_2_RandomForestRegressor_metrics.json",
         "metrics": {
-          "mae": 85.19904739917976,
-          "rmse": 135.34131206179373,
-          "r2": 0.5514050476171387
+          "mae": 80.12066,
+          "rmse": 128.421690724737,
+          "r2": 0.5961032260903201
         },
         "n_train": 12000,
         "n_test": 3000,
@@ -82,13 +83,14 @@
     "tuned_metrics_path": "artifacts/modeling/tuned_models/tuned_RandomForestRegressor_metrics.json",
     "best_params": {
       "max_depth": null,
+      "min_samples_leaf": 2,
       "min_samples_split": 5,
-      "n_estimators": 100
+      "n_estimators": 200
     },
     "metrics": {
-      "mae": 80.23556942277304,
-      "rmse": 128.72369013611674,
-      "r2": 0.5942013665404381
+      "mae": 79.41009644081709,
+      "rmse": 127.65721095960528,
+      "r2": 0.6008976166641524
     },
     "n_train": 12000,
     "n_test": 3000,

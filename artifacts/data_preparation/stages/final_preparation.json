@@ -8,12 +8,14 @@
     "target_column": "price",
     "task_type": "regression",
     "final_shape": [
-      205,
-      66
+      15000,
+      216
     ],
-    "n_features": 65,
+    "n_features": 215,
     "non_numeric_feature_columns": [],
     "missing_values_total": 0,
-    "warnings": []
+    "warnings": [
+      "Note: Boolean columns from OneHotEncoder are treated as numeric in ML context"
+    ]
   }
 }

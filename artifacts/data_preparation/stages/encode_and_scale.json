@@ -174,22 +174,22 @@
         "std": 1334.3630053218494
       },
       {
+        "column": "description_len",
+        "strategy": "standard_scaling",
+        "mean": 365.4508,
+        "std": 157.69293764633923
+      },
+      {
         "column": "availability_30_ratio",
         "strategy": "standard_scaling",
         "mean": 0.49080444444444443,
         "std": 0.3769786677683785
       },
       {
-        "column": "review_span_days",
+        "column": "days_since_last_review",
         "strategy": "standard_scaling",
-        "mean": 930.1008,
-        "std": 958.7354329956686
-      },
-      {
-        "column": "description_length",
-        "strategy": "standard_scaling",
-        "mean": 365.4508,
-        "std": 157.69293764633923
+        "mean": 217.84286666666668,
+        "std": 355.7026138959591
       }
     ],
     "warnings": []

@@ -1,72 +1,73 @@
-# Airbnb Price Prediction Project Report
+# Финальный отчет по проекту прогнозирования стоимости аренды Airbnb
 
-## 1. Project Title
-Airbnb Rental Price Prediction
+## 1. Название проекта
+Прогнозирование стоимости краткосрочной аренды жилья (Airbnb Price Prediction).
 
-## 2. Business Task
-The objective of this project is to develop a regression model to predict the rental price of Airbnb listings. By analyzing property features, host profiles, and market dynamics, the model aims to provide accurate pricing estimates to help hosts optimize their revenue and guests understand market value.
+## 2. Бизнес-задача
+Разработка модели машинного обучения для точного предсказания стоимости аренды объектов недвижимости на основе их характеристик, местоположения и отзывов. Это поможет арендодателям устанавливать конкурентоспособные цены, а платформе — предоставлять более точные рекомендации.
 
-## 3. Dataset Overview
-- **Domain:** Short-term real estate rental market (Airbnb).
-- **Total Rows:** 15,000
-- **Total Columns:** 36
-- **Row Meaning:** Each row represents a unique rental listing (apartment, house, or room).
+## 3. Общая информация о данных
+- **Количество строк:** 15 000
+- **Количество колонок:** 36
+- **Описание:** Набор данных содержит информацию об объявлениях по краткосрочной аренде, включая физические характеристики объекта, данные о хосте, местоположение, доступность и отзывы гостей.
+- **Единица данных:** Каждая строка представляет собой уникальное объявление.
 
-## 4. Target Column and Task Type
-- **Target Column:** `price`
-- **Task Type:** Regression
+## 4. Целевая колонка и тип ML-задачи
+- **Целевая колонка:** `price`
+- **Тип задачи:** Регрессия (Regression)
 
-## 5. Feature Groups
-- **Numeric:** accommodates, bathrooms, bedrooms, beds, host_listings_count, host_total_listings_count, latitude, longitude, availability_30, availability_60, availability_90, availability_365, number_of_reviews, number_of_reviews_ltm, number_of_reviews_l30d, review_scores_rating, review_scores_cleanliness, review_scores_location, review_scores_value, reviews_per_month.
-- **Categorical:** property_type, room_type, host_location, host_response_time, host_response_rate, host_acceptance_rate, city.
-- **Text:** description, amenities.
-- **Datetime:** host_since, first_review, last_review.
-- **Boolean-like:** host_is_superhost, has_availability.
-- **ID:** id.
+## 5. Группы признаков
+- **Числовые:** accommodates, bathrooms, bedrooms, beds, host_listings_count, latitude, longitude, availability_30/60/90/365, number_of_reviews, review_scores_rating и др.
+- **Категориальные:** property_type, room_type, host_location, host_response_time, city и др.
+- **Текстовые:** description, amenities
+- **Дата/Время:** host_since, first_review, last_review
+- **Бинарные:** host_is_superhost, has_availability
+- **Идентификаторы:** id
 
-## 6. Data Quality Summary
-- **Missing Values:** 31,176 total missing values across the dataset.
-- **Duplicate Rows:** 0
-- **Data Preparation Status:** Success. All missing values were handled during the preparation stage.
+## 6. Обзор качества данных
+- **Пропущенные значения:** Всего 31 176 пропусков в исходных данных.
+- **Дубликаты:** 0 строк.
+- **Статус:** Все пропущенные значения были обработаны на этапе подготовки данных.
 
-## 7. Data Preparation Steps
-1. **Feature Type Casting:** Ensuring columns are in the correct format (numeric, categorical, etc.).
-2. **Feature Engineering:** Creating new derived features to capture complex relationships.
-3. **Column Cleaning:** Removing or fixing inconsistent data.
-4. **Missing Value Imputation:** Handling null values to ensure model compatibility.
-5. **Encoding and Scaling:** Transforming categorical variables and normalizing numeric features.
-6. **Final Preparation:** Finalizing the dataset for training (Final shape: 205 rows, 66 features).
+## 7. Шаги по подготовке данных
+1. **Приведение типов:** Преобразование признаков к соответствующим форматам.
+2. **Генерация признаков:** Создание новых аналитических показателей.
+3. **Очистка колонок:** Удаление избыточных или неинформативных данных.
+4. **Обработка пропусков:** Заполнение отсутствующих значений.
+5. **Кодирование и масштабирование:** Применение OneHotEncoding для категориальных признаков и масштабирование числовых.
+6. **Финальная подготовка:** Формирование итогового набора данных из 215 признаков.
 
-## 8. Created Features
-- **beds_per_bedroom:** Indicates density of sleeping arrangements relative to rooms.
-- **amenities_count:** Total number of amenities offered.
-- **host_tenure_days:** Duration the host has been on the platform.
-- **availability_30_ratio:** Normalized short-term availability indicator.
-- **review_span_days:** Duration the listing has been active and receiving reviews.
-- **description_length:** Length of the property description.
+## 8. Созданные признаки
+- `beds_per_bedroom`: Плотность спальных мест на комнату.
+- `amenities_count`: Общее количество предлагаемых удобств.
+- `host_tenure_days`: Количество дней, в течение которых хост зарегистрирован на платформе.
+- `description_len`: Длина описания объекта.
+- `availability_30_ratio`: Доля доступного времени в ближайшие 30 дней.
+- `days_since_last_review`: Время, прошедшее с момента последнего отзыва.
 
-## 9. Models Tested
-- Ridge Regression
-- RandomForestRegressor
+## 9. Протестированные модели
+В ходе исследования были протестированы следующие алгоритмы:
+1. **Ridge** (Линейная регрессия с L2-регуляризацией)
+2. **RandomForestRegressor** (Случайный лес)
 
-## 10. Best Model
-- **Model Name:** RandomForestRegressor
+## 10. Информация о лучшей модели
+Лучшей моделью признан **RandomForestRegressor**.
+- **Параметры:** n_estimators=200, min_samples_split=5, min_samples_leaf=2, max_depth=None.
+- **Обоснование:** Модель показала наименьшую ошибку RMSE среди всех протестированных вариантов.
 
-## 11. Best Metrics
-- **MAE (Mean Absolute Error):** 80.24
-- **RMSE (Root Mean Squared Error):** 128.72
-- **R2 Score:** 0.5942
+## 11. Лучшие метрики
+- **MAE (Средняя абсолютная ошибка):** 79.41
+- **RMSE (Среднеквадратичная ошибка):** 127.66
+- **R2 (Коэффициент детерминации):** 0.6009
 
-## 12. Hyperparameter Tuning Result
-Tuning was performed on the RandomForestRegressor.
-- **Best Parameters:** `max_depth: null`, `min_samples_split: 5`, `n_estimators: 100`.
-- **Improvement:** R2 score improved from 0.5514 (baseline) to 0.5942 (tuned).
+## 12. Настройка гиперпараметров
+Была проведена оптимизация гиперпараметров (tuning), что позволило улучшить метрику R2 с 0.5961 (базовая модель) до 0.6009 (настроенная модель).
 
-## 13. Business Interpretation
-The RandomForestRegressor model explains approximately 59.4% of the variance in Airbnb prices. With a Mean Absolute Error of $80.24, the model provides a solid foundation for automated pricing suggestions. The inclusion of engineered features like `amenities_count` and `beds_per_bedroom` suggests that property utility and service offerings are significant drivers of price.
+## 13. Бизнес-интерпретация результатов
+Модель объясняет примерно 60% вариативности цен (R2 ≈ 0.60). Средняя ошибка предсказания составляет около 79 единиц валюты. Это дает надежную базу для автоматизированной оценки стоимости жилья, хотя для объектов с экстремально высокой или низкой ценой могут потребоваться дополнительные уточняющие факторы. Созданные признаки, такие как количество удобств и плотность спальных мест, вносят значимый вклад в предсказательную способность модели.
 
-## 14. Final Artifacts
-- **Best Model:** `artifacts/modeling/best_model.joblib`
-- **Prepared Dataset:** `artifacts/data_preparation/prepared_dataset.csv`
-- **EDA Summary:** `artifacts/data_description/eda_artifacts.json`
-- **Final Metrics:** `artifacts/modeling/final_metrics.json`
+## 14. Конечные артефакты
+- **Лучшая модель:** `artifacts/modeling/best_model.joblib`
+- **Подготовленный датасет:** `artifacts/data_preparation/prepared_dataset.csv`
+- **Метрики:** `artifacts/modeling/final_metrics.json`
+- **Отчет по EDA:** `artifacts/data_description/data_description_report.md`

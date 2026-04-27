@@ -10,16 +10,16 @@
         "job_id": "model_1",
         "model_name": "Ridge",
         "model_type": "linear",
-        "reason": "stable linear baseline model"
+        "reason": "стабильная линейная baseline-модель"
       },
       {
         "job_id": "model_2",
         "model_name": "RandomForestRegressor",
         "model_type": "ensemble",
-        "reason": "non-linear ensemble model"
+        "reason": "нелинейная ансамблевая модель для захвата сложных зависимостей"
       }
     ],
     "primary_metric": "rmse",
-    "selection_rule": "lower RMSE is better for regression"
+    "selection_rule": "для регрессии ниже RMSE означает лучшее качество"
   }
 }

@@ -5,7 +5,8 @@
   "summary": "Final report was created and saved.",
   "artifacts": {
     "final_report_path": "artifacts/reporting/final_report.md",
-    "reporting_summary_path": "artifacts/reporting/reporting_summary.json"
+    "reporting_summary_path": "artifacts/reporting/reporting_summary.json",
+    "reporting_stage_path": "artifacts/reporting/reporting_agent_result.json"
   },
   "next_input": {},
   "reason": null

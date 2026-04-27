@@ -81,6 +81,7 @@
       "price": "float64"
     },
     "missing_values_total": 31176,
-    "duplicate_rows": 0
+    "duplicate_rows": 0,
+    "memory_usage_mb": 28.3086
   }
 }

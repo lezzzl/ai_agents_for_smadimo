@@ -4,10 +4,10 @@
 Dataset contains 15000 rows and 36 columns. Task type: regression.
 
 ## Domain
-The dataset pertains to the short-term real estate rental market, specifically Airbnb listings. It contains detailed information about property features, host profiles, geographic locations, availability, and guest reviews, with the primary target variable being the rental price.
+The dataset contains information about short-term rental listings, likely from the Airbnb platform, including property details, host information, and pricing.
 
 ## Row meaning
-Each row represents a unique rental listing (an apartment, house, or room) on the Airbnb platform.
+Each row represents a unique rental listing with its physical characteristics, location, host metrics, availability, and guest reviews.
 
 ## Target
 - Target column: price
@@ -21,7 +21,7 @@ Each row represents a unique rental listing (an apartment, house, or room) on th
 - Total missing values: 31176
 - Duplicate rows: 0
 - Constant columns count: 0
-- High-cardinality columns count: 8
+- High-cardinality columns count: 5
 
 ## Schema
 ```json

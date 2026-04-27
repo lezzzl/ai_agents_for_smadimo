@@ -56,13 +56,232 @@
         "price"
       ]
     },
+    "column_profile": {
+      "id": {
+        "dtype": "int64",
+        "unique_values": 15000,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      },
+      "description": {
+        "dtype": "str",
+        "unique_values": 14202,
+        "missing_values": 356,
+        "missing_ratio": 0.0237,
+        "avg_length": 745.2,
+        "max_length": 1000
+      },
+      "amenities": {
+        "dtype": "str",
+        "unique_values": 14880,
+        "missing_values": 0,
+        "missing_ratio": 0.0,
+        "avg_length": 350.4,
+        "max_length": 1800
+      },
+      "property_type": {
+        "dtype": "str",
+        "unique_values": 91,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      },
+      "room_type": {
+        "dtype": "str",
+        "unique_values": 4,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      },
+      "accommodates": {
+        "dtype": "int64",
+        "unique_values": 16,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      },
+      "bathrooms": {
+        "dtype": "float64",
+        "unique_values": 21,
+        "missing_values": 5,
+        "missing_ratio": 0.0003
+      },
+      "bedrooms": {
+        "dtype": "float64",
+        "unique_values": 14,
+        "missing_values": 14,
+        "missing_ratio": 0.0009
+      },
+      "beds": {
+        "dtype": "float64",
+        "unique_values": 21,
+        "missing_values": 36,
+        "missing_ratio": 0.0024
+      },
+      "host_since": {
+        "dtype": "str",
+        "unique_values": 4564,
+        "missing_values": 5,
+        "missing_ratio": 0.0003
+      },
+      "host_location": {
+        "dtype": "str",
+        "unique_values": 1935,
+        "missing_values": 3887,
+        "missing_ratio": 0.2591
+      },
+      "host_response_time": {
+        "dtype": "str",
+        "unique_values": 4,
+        "missing_values": 2301,
+        "missing_ratio": 0.1534
+      },
+      "host_response_rate": {
+        "dtype": "str",
+        "unique_values": 86,
+        "missing_values": 2301,
+        "missing_ratio": 0.1534
+      },
+      "host_acceptance_rate": {
+        "dtype": "str",
+        "unique_values": 101,
+        "missing_values": 1282,
+        "missing_ratio": 0.0854
+      },
+      "host_is_superhost": {
+        "dtype": "str",
+        "unique_values": 2,
+        "missing_values": 379,
+        "missing_ratio": 0.0252
+      },
+      "host_listings_count": {
+        "dtype": "float64",
+        "unique_values": 463,
+        "missing_values": 5,
+        "missing_ratio": 0.0003
+      },
+      "host_total_listings_count": {
+        "dtype": "float64",
+        "unique_values": 557,
+        "missing_values": 5,
+        "missing_ratio": 0.0003
+      },
+      "latitude": {
+        "dtype": "float64",
+        "unique_values": 14858,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      },
+      "longitude": {
+        "dtype": "float64",
+        "unique_values": 14867,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      },
+      "city": {
+        "dtype": "str",
+        "unique_values": 108,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      },
+      "has_availability": {
+        "dtype": "str",
+        "unique_values": 2,
+        "missing_values": 150,
+        "missing_ratio": 0.01
+      },
+      "availability_30": {
+        "dtype": "int64",
+        "unique_values": 31,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      },
+      "availability_60": {
+        "dtype": "int64",
+        "unique_values": 61,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      },
+      "availability_90": {
+        "dtype": "int64",
+        "unique_values": 91,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      },
+      "availability_365": {
+        "dtype": "int64",
+        "unique_values": 366,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      },
+      "number_of_reviews": {
+        "dtype": "int64",
+        "unique_values": 511,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      },
+      "number_of_reviews_ltm": {
+        "dtype": "int64",
+        "unique_values": 135,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      },
+      "number_of_reviews_l30d": {
+        "dtype": "int64",
+        "unique_values": 25,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      },
+      "first_review": {
+        "dtype": "str",
+        "unique_values": 2845,
+        "missing_values": 3114,
+        "missing_ratio": 0.2076
+      },
+      "last_review": {
+        "dtype": "str",
+        "unique_values": 1845,
+        "missing_values": 3114,
+        "missing_ratio": 0.2076
+      },
+      "review_scores_rating": {
+        "dtype": "float64",
+        "unique_values": 151,
+        "missing_values": 3114,
+        "missing_ratio": 0.2076
+      },
+      "review_scores_cleanliness": {
+        "dtype": "float64",
+        "unique_values": 158,
+        "missing_values": 3121,
+        "missing_ratio": 0.208
+      },
+      "review_scores_location": {
+        "dtype": "float64",
+        "unique_values": 139,
+        "missing_values": 3123,
+        "missing_ratio": 0.2082
+      },
+      "review_scores_value": {
+        "dtype": "float64",
+        "unique_values": 161,
+        "missing_values": 3123,
+        "missing_ratio": 0.2082
+      },
+      "reviews_per_month": {
+        "dtype": "float64",
+        "unique_values": 840,
+        "missing_values": 3114,
+        "missing_ratio": 0.2076
+      },
+      "price": {
+        "dtype": "float64",
+        "unique_values": 1015,
+        "missing_values": 0,
+        "missing_ratio": 0.0
+      }
+    },
     "schema_notes": [
-      "id is the primary identifier.",
-      "description and amenities are long-form text or lists and classified as text.",
-      "host_since, first_review, and last_review are date-formatted strings.",
-      "host_is_superhost and has_availability are binary flags (t/f).",
-      "host_response_rate and host_acceptance_rate are percentages stored as strings.",
-      "price is the continuous target variable for regression."
+      "Target 'price' is continuous numeric, task identified as regression.",
+      "Columns 'description' and 'amenities' are classified as text due to high length and content.",
+      "Date columns identified by string format and content."
     ]
   }
 }

@@ -1,1 +1,12 @@
-{"project_name": "Airbnb Price Prediction", "best_model": "RandomForestRegressor", "r2_score": 0.5942013665404381, "mae": 80.23556942277304, "report_path": "artifacts/reporting/final_report.md"}
+{
+  "project_name": "Airbnb Price Prediction",
+  "task_type": "regression",
+  "best_model": "RandomForestRegressor",
+  "best_metrics": {
+    "mae": 79.41009644081709,
+    "rmse": 127.65721095960528,
+    "r2": 0.6008976166641524
+  },
+  "n_features": 215,
+  "status": "completed"
+}

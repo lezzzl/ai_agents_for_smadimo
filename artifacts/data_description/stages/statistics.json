@@ -3,10 +3,261 @@
   "status": "success",
   "result": {
     "numeric_columns_count": 20,
-    "categorical_columns_count": 7,
+    "categorical_columns_count": 9,
     "text_columns_count": 2,
     "datetime_columns_count": 3,
     "target_column": "price",
-    "statistics_note": "Detailed statistics were calculated for EDA stage."
+    "numeric_summary": {
+      "accommodates": {
+        "count": 15000,
+        "mean": 3.925,
+        "std": 2.434729,
+        "min": 1.0,
+        "median": 4.0,
+        "max": 16.0
+      },
+      "bathrooms": {
+        "count": 14995,
+        "mean": 1.393698,
+        "std": 0.781525,
+        "min": 0.0,
+        "median": 1.0,
+        "max": 20.0
+      },
+      "bedrooms": {
+        "count": 14986,
+        "mean": 1.638329,
+        "std": 1.11518,
+        "min": 0.0,
+        "median": 1.0,
+        "max": 20.0
+      },
+      "beds": {
+        "count": 14964,
+        "mean": 2.314087,
+        "std": 1.757538,
+        "min": 0.0,
+        "median": 2.0,
+        "max": 21.0
+      },
+      "host_listings_count": {
+        "count": 14995,
+        "mean": 75.423808,
+        "std": 418.637637,
+        "min": 0.0,
+        "median": 3.0,
+        "max": 5282.0
+      },
+      "host_total_listings_count": {
+        "count": 14995,
+        "mean": 107.442014,
+        "std": 555.714905,
+        "min": 0.0,
+        "median": 4.0,
+        "max": 9988.0
+      },
+      "latitude": {
+        "count": 15000,
+        "mean": 32.499201,
+        "std": 24.747874,
+        "min": -43.36718,
+        "median": 40.284665,
+        "max": 59.961624
+      },
+      "longitude": {
+        "count": 15000,
+        "mean": -13.118328,
+        "std": 71.559299,
+        "min": -159.49481,
+        "median": 2.161424,
+        "max": 153.63466
+      },
+      "availability_30": {
+        "count": 15000,
+        "mean": 14.724133,
+        "std": 11.30936,
+        "min": 0.0,
+        "median": 15.0,
+        "max": 30.0
+      },
+      "availability_60": {
+        "count": 15000,
+        "mean": 32.991,
+        "std": 22.2001,
+        "min": 0.0,
+        "median": 37.0,
+        "max": 60.0
+      },
+      "availability_90": {
+        "count": 15000,
+        "mean": 52.981667,
+        "std": 32.597776,
+        "min": 0.0,
+        "median": 61.0,
+        "max": 90.0
+      },
+      "availability_365": {
+        "count": 15000,
+        "mean": 211.653133,
+        "std": 119.10165,
+        "min": 0.0,
+        "median": 231.0,
+        "max": 365.0
+      },
+      "number_of_reviews": {
+        "count": 15000,
+        "mean": 42.2754,
+        "std": 84.077575,
+        "min": 0.0,
+        "median": 10.0,
+        "max": 1397.0
+      },
+      "number_of_reviews_ltm": {
+        "count": 15000,
+        "mean": 10.927533,
+        "std": 17.898724,
+        "min": 0.0,
+        "median": 3.0,
+        "max": 344.0
+      },
+      "number_of_reviews_l30d": {
+        "count": 15000,
+        "mean": 0.668133,
+        "std": 1.476305,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 25.0
+      },
+      "review_scores_rating": {
+        "count": 12079,
+        "mean": 4.751584,
+        "std": 0.38122,
+        "min": 1.0,
+        "median": 4.86,
+        "max": 5.0
+      },
+      "review_scores_cleanliness": {
+        "count": 12078,
+        "mean": 4.744441,
+        "std": 0.39096,
+        "min": 1.0,
+        "median": 4.87,
+        "max": 5.0
+      },
+      "review_scores_location": {
+        "count": 12078,
+        "mean": 4.779516,
+        "std": 0.328295,
+        "min": 1.0,
+        "median": 4.88,
+        "max": 5.0
+      },
+      "review_scores_value": {
+        "count": 12078,
+        "mean": 4.667521,
+        "std": 0.416428,
+        "min": 1.0,
+        "median": 4.77,
+        "max": 5.0
+      },
+      "reviews_per_month": {
+        "count": 12079,
+        "mean": 1.442285,
+        "std": 1.667148,
+        "min": 0.01,
+        "median": 0.87,
+        "max": 26.36
+      }
+    },
+    "categorical_summary": {
+      "property_type": {
+        "unique_values": 91,
+        "most_frequent": "Entire rental unit",
+        "frequency": 6121
+      },
+      "room_type": {
+        "unique_values": 4,
+        "most_frequent": "Entire home/apt",
+        "frequency": 11683
+      },
+      "host_location": {
+        "unique_values": 1935,
+        "most_frequent": "Paris, France",
+        "frequency": 636
+      },
+      "host_response_time": {
+        "unique_values": 4,
+        "most_frequent": "within an hour",
+        "frequency": 9567
+      },
+      "host_response_rate": {
+        "unique_values": 86,
+        "most_frequent": "100%",
+        "frequency": 9855
+      },
+      "host_acceptance_rate": {
+        "unique_values": 101,
+        "most_frequent": "100%",
+        "frequency": 5807
+      },
+      "city": {
+        "unique_values": 108,
+        "most_frequent": "London",
+        "frequency": 990
+      },
+      "host_is_superhost": {
+        "unique_values": 2,
+        "most_frequent": "f",
+        "frequency": 9523
+      },
+      "has_availability": {
+        "unique_values": 2,
+        "most_frequent": "t",
+        "frequency": 14849
+      }
+    },
+    "text_summary": {
+      "description": {
+        "non_empty_count": 14644,
+        "avg_length": 374.335018,
+        "max_length": 1000
+      },
+      "amenities": {
+        "non_empty_count": 15000,
+        "avg_length": 596.999667,
+        "max_length": 2029
+      }
+    },
+    "datetime_summary": {
+      "host_since": {
+        "min_date": "2009-01-11 00:00:00",
+        "max_date": "2025-03-07 00:00:00",
+        "non_empty_count": 14995
+      },
+      "first_review": {
+        "min_date": "2010-10-11 00:00:00",
+        "max_date": "2025-03-12 00:00:00",
+        "non_empty_count": 12079
+      },
+      "last_review": {
+        "min_date": "2013-10-05 00:00:00",
+        "max_date": "2025-03-14 00:00:00",
+        "non_empty_count": 12079
+      }
+    },
+    "target_summary": {
+      "target_type": "regression",
+      "missing_values": 0,
+      "unique_values": 897,
+      "statistics": {
+        "count": 15000,
+        "mean": 208.626,
+        "std": 198.579456,
+        "min": 10.0,
+        "median": 135.0,
+        "max": 1000.0
+      }
+    },
+    "statistics_note": "Подробная статистика была рассчитана по сырому датасету."
   }
 }

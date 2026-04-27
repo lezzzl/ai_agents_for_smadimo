@@ -8,39 +8,39 @@
     "dropped_columns": [
       {
         "name": "id",
-        "reason": "ID column not useful for modeling."
+        "reason": "ID column"
       },
       {
         "name": "host_since",
-        "reason": "Raw datetime column replaced by derived features."
+        "reason": "Raw datetime column"
       },
       {
         "name": "first_review",
-        "reason": "Raw datetime column replaced by derived features."
+        "reason": "Raw datetime column"
       },
       {
         "name": "last_review",
-        "reason": "Raw datetime column replaced by derived features."
+        "reason": "Raw datetime column"
       },
       {
         "name": "description",
-        "reason": "Raw text column replaced by derived features."
+        "reason": "Raw text column"
       },
       {
         "name": "amenities",
-        "reason": "Raw text column replaced by derived features."
+        "reason": "Raw text column"
       },
       {
         "name": "host_location",
-        "reason": "High cardinality categorical column (1935 unique values)."
+        "reason": "High cardinality categorical column (1935 unique values)"
       },
       {
         "name": "host_acceptance_rate",
-        "reason": "High cardinality categorical column (101 unique values)."
+        "reason": "High cardinality categorical column (101 unique values)"
       },
       {
         "name": "city",
-        "reason": "High cardinality categorical column (108 unique values)."
+        "reason": "High cardinality categorical column (108 unique values)"
       }
     ],
     "kept_columns_notes": [
