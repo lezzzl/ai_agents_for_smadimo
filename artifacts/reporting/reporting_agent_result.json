@@ -8,6 +8,8 @@
     "reporting_summary_path": "artifacts/reporting/reporting_summary.json",
     "reporting_stage_path": "artifacts/reporting/reporting_agent_result.json"
   },
+  "previous_metrics_path": "artifacts/modeling/final_metrics.json",
+  "previous_best_model_path": "artifacts/modeling/best_model.joblib",
   "next_input": {},
   "reason": null
 }
