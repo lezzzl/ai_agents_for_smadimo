@@ -3,7 +3,7 @@
   "status": "success",
   "result": {
     "numeric_columns_count": 20,
-    "categorical_columns_count": 9,
+    "categorical_columns_count": 7,
     "text_columns_count": 2,
     "datetime_columns_count": 3,
     "target_column": "price",
@@ -204,45 +204,35 @@
         "unique_values": 108,
         "most_frequent": "London",
         "frequency": 990
-      },
-      "host_is_superhost": {
-        "unique_values": 2,
-        "most_frequent": "f",
-        "frequency": 9523
-      },
-      "has_availability": {
-        "unique_values": 2,
-        "most_frequent": "t",
-        "frequency": 14849
       }
     },
     "text_summary": {
       "description": {
-        "non_empty_count": 14644,
+        "count": 14644,
         "avg_length": 374.335018,
         "max_length": 1000
       },
       "amenities": {
-        "non_empty_count": 15000,
+        "count": 15000,
         "avg_length": 596.999667,
         "max_length": 2029
       }
     },
     "datetime_summary": {
       "host_since": {
-        "min_date": "2009-01-11 00:00:00",
-        "max_date": "2025-03-07 00:00:00",
-        "non_empty_count": 14995
+        "min": "2009-01-11 00:00:00",
+        "max": "2025-03-07 00:00:00",
+        "count": 14995
       },
       "first_review": {
-        "min_date": "2010-10-11 00:00:00",
-        "max_date": "2025-03-12 00:00:00",
-        "non_empty_count": 12079
+        "min": "2010-10-11 00:00:00",
+        "max": "2025-03-12 00:00:00",
+        "count": 12079
       },
       "last_review": {
-        "min_date": "2013-10-05 00:00:00",
-        "max_date": "2025-03-14 00:00:00",
-        "non_empty_count": 12079
+        "min": "2013-10-05 00:00:00",
+        "max": "2025-03-14 00:00:00",
+        "count": 12079
       }
     },
     "target_summary": {
@@ -250,7 +240,6 @@
       "missing_values": 0,
       "unique_values": 897,
       "statistics": {
-        "count": 15000,
         "mean": 208.626,
         "std": 198.579456,
         "min": 10.0,

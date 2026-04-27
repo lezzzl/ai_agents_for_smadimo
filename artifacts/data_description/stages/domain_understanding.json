@@ -2,10 +2,10 @@
   "stage": "domain_understanding",
   "status": "success",
   "result": {
-    "domain_summary": "The dataset contains information about short-term rental listings, likely from the Airbnb platform, including property details, host information, and pricing.",
-    "row_meaning": "Each row represents a unique rental listing with its physical characteristics, location, host metrics, availability, and guest reviews.",
+    "domain_summary": "Датасет содержит информацию о предложениях по краткосрочной аренде жилья на платформе Airbnb.",
+    "row_meaning": "Одна строка представляет собой уникальное объявление о сдаче жилья с описанием объекта, характеристиками хозяина, доступностью и оценками пользователей.",
     "column_groups_description": {
-      "listing_details": [
+      "listing_info": [
         "id",
         "description",
         "amenities",
@@ -18,7 +18,7 @@
         "bedrooms",
         "beds"
       ],
-      "host_information": [
+      "host_details": [
         "host_since",
         "host_location",
         "host_response_time",
@@ -58,8 +58,9 @@
     },
     "confidence": "high",
     "notes": [
-      "The presence of columns like 'host_is_superhost' and 'review_scores_rating' strongly suggests Airbnb data.",
-      "The 'price' column is the likely target variable for prediction tasks."
+      "Колонки host_is_superhost и has_availability используют строковые флаги 't'/'f' вместо булевых значений.",
+      "Поле amenities содержит списки в строковом формате JSON.",
+      "География данных обширна и включает разные города (San Francisco, Milan и др.)."
     ]
   }
 }

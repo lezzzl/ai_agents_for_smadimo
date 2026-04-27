@@ -1,1 +1,1 @@
-{"stage": "final_preparation", "final_shape": [15000, 216], "n_features": 215, "target_column": "price", "missing_values_total": 0}
+{"stage": "final_preparation", "final_shape": [15000, 35], "n_features": 34, "target_column": "price", "missing_values_total": 0}

@@ -3,8 +3,8 @@
   "status": "success",
   "summary": "Dataset contains 15000 rows and 36 columns. Task type: regression.",
   "decisions": {
-    "domain_summary": "The dataset contains information about short-term rental listings, likely from the Airbnb platform, including property details, host information, and pricing.",
-    "row_meaning": "Each row represents a unique rental listing with its physical characteristics, location, host metrics, availability, and guest reviews.",
+    "domain_summary": "Датасет содержит информацию о предложениях по краткосрочной аренде жилья на платформе Airbnb.",
+    "row_meaning": "Одна строка представляет собой уникальное объявление о сдаче жилья с описанием объекта, характеристиками хозяина, доступностью и оценками пользователей.",
     "target_column": "price",
     "task_type": "regression",
     "schema": {
@@ -135,8 +135,8 @@
     "data_summary": {
       "n_rows": 15000,
       "n_columns": 36,
-      "domain_summary": "The dataset contains information about short-term rental listings, likely from the Airbnb platform, including property details, host information, and pricing.",
-      "row_meaning": "Each row represents a unique rental listing with its physical characteristics, location, host metrics, availability, and guest reviews.",
+      "domain_summary": "Датасет содержит информацию о предложениях по краткосрочной аренде жилья на платформе Airbnb.",
+      "row_meaning": "Одна строка представляет собой уникальное объявление о сдаче жилья с описанием объекта, характеристиками хозяина, доступностью и оценками пользователей.",
       "missing_values_total": 31176,
       "duplicate_rows": 0,
       "statistics_path": "artifacts/data_description/stages/statistics.json",

@@ -10,28 +10,40 @@
     "target_unchanged": true,
     "encoding_actions": [
       {
+        "column": "host_is_superhost",
+        "strategy": "binary_mapping",
+        "n_unique": 2,
+        "created_columns_count": 1
+      },
+      {
+        "column": "has_availability",
+        "strategy": "binary_mapping",
+        "n_unique": 2,
+        "created_columns_count": 1
+      },
+      {
         "column": "property_type",
-        "strategy": "one_hot",
+        "strategy": "frequency_encoding",
         "n_unique": 91,
-        "created_columns_count": 91
+        "created_columns_count": 1
       },
       {
         "column": "room_type",
         "strategy": "one_hot",
         "n_unique": 4,
-        "created_columns_count": 4
+        "created_columns_count": 3
       },
       {
         "column": "host_response_time",
         "strategy": "one_hot",
         "n_unique": 5,
-        "created_columns_count": 5
+        "created_columns_count": 4
       },
       {
         "column": "host_response_rate",
-        "strategy": "one_hot",
+        "strategy": "frequency_encoding",
         "n_unique": 87,
-        "created_columns_count": 87
+        "created_columns_count": 1
       }
     ],
     "scaling_actions": [
@@ -39,157 +51,121 @@
         "column": "accommodates",
         "strategy": "standard_scaling",
         "mean": 3.925,
-        "std": 2.434728635166924
+        "std": 2.4347
       },
       {
         "column": "bathrooms",
         "strategy": "standard_scaling",
-        "mean": 1.3935666666666666,
-        "std": 0.7814277451201818
+        "mean": 1.3936,
+        "std": 0.7814
       },
       {
         "column": "bedrooms",
         "strategy": "standard_scaling",
-        "mean": 1.6377333333333333,
-        "std": 1.1148299056822355
+        "mean": 1.6377,
+        "std": 1.1148
       },
       {
         "column": "beds",
         "strategy": "standard_scaling",
-        "mean": 2.3133333333333335,
-        "std": 1.755494519014317
+        "mean": 2.3133,
+        "std": 1.7555
       },
       {
         "column": "host_listings_count",
         "strategy": "standard_scaling",
-        "mean": 75.39966666666666,
-        "std": 418.5699414111646
+        "mean": 75.3997,
+        "std": 418.5699
       },
       {
         "column": "host_total_listings_count",
         "strategy": "standard_scaling",
-        "mean": 107.40753333333333,
-        "std": 555.6254803026402
+        "mean": 107.4075,
+        "std": 555.6255
       },
       {
         "column": "latitude",
         "strategy": "standard_scaling",
-        "mean": 32.49920121658138,
-        "std": 24.747873779480983
+        "mean": 32.4992,
+        "std": 24.7479
       },
       {
         "column": "longitude",
         "strategy": "standard_scaling",
-        "mean": -13.118328196896407,
-        "std": 71.55929870310588
+        "mean": -13.1183,
+        "std": 71.5593
       },
       {
         "column": "availability_30",
         "strategy": "standard_scaling",
-        "mean": 14.724133333333333,
-        "std": 11.309360033051355
+        "mean": 14.7241,
+        "std": 11.3094
       },
       {
         "column": "availability_60",
         "strategy": "standard_scaling",
         "mean": 32.991,
-        "std": 22.200100043981728
+        "std": 22.2001
       },
       {
         "column": "availability_90",
         "strategy": "standard_scaling",
-        "mean": 52.98166666666667,
-        "std": 32.59777556143454
+        "mean": 52.9817,
+        "std": 32.5978
       },
       {
         "column": "availability_365",
         "strategy": "standard_scaling",
-        "mean": 211.65313333333333,
-        "std": 119.1016499901838
+        "mean": 211.6531,
+        "std": 119.1016
       },
       {
         "column": "number_of_reviews",
         "strategy": "standard_scaling",
         "mean": 42.2754,
-        "std": 84.07757464039085
+        "std": 84.0776
       },
       {
         "column": "number_of_reviews_ltm",
         "strategy": "standard_scaling",
-        "mean": 10.927533333333333,
-        "std": 17.89872359143623
+        "mean": 10.9275,
+        "std": 17.8987
       },
       {
         "column": "number_of_reviews_l30d",
         "strategy": "standard_scaling",
-        "mean": 0.6681333333333334,
-        "std": 1.4763050093575738
+        "mean": 0.6681,
+        "std": 1.4763
       },
       {
         "column": "review_scores_rating",
         "strategy": "standard_scaling",
-        "mean": 4.772695999999999,
-        "std": 0.3447753127063336
+        "mean": 4.7727,
+        "std": 0.3448
       },
       {
         "column": "review_scores_cleanliness",
         "strategy": "standard_scaling",
         "mean": 4.7689,
-        "std": 0.354324370764014
+        "std": 0.3543
       },
       {
         "column": "review_scores_location",
         "strategy": "standard_scaling",
-        "mean": 4.7990900000000005,
-        "std": 0.29726233570100186
+        "mean": 4.7991,
+        "std": 0.2973
       },
       {
         "column": "review_scores_value",
         "strategy": "standard_scaling",
-        "mean": 4.6874839999999995,
-        "std": 0.3758681083389816
+        "mean": 4.6875,
+        "std": 0.3759
       },
       {
         "column": "reviews_per_month",
         "strategy": "standard_scaling",
-        "mean": 1.330842,
-        "std": 1.5130990259332509
-      },
-      {
-        "column": "beds_per_bedroom",
-        "strategy": "standard_scaling",
-        "mean": 1.3634637037037038,
-        "std": 0.7128885955692111
-      },
-      {
-        "column": "amenities_count",
-        "strategy": "standard_scaling",
-        "mean": 33.7824,
-        "std": 16.66574030858922
-      },
-      {
-        "column": "host_tenure_days",
-        "strategy": "standard_scaling",
-        "mean": 2513.4362,
-        "std": 1334.3630053218494
-      },
-      {
-        "column": "description_len",
-        "strategy": "standard_scaling",
-        "mean": 365.4508,
-        "std": 157.69293764633923
-      },
-      {
-        "column": "availability_30_ratio",
-        "strategy": "standard_scaling",
-        "mean": 0.49080444444444443,
-        "std": 0.3769786677683785
-      },
-      {
-        "column": "days_since_last_review",
-        "strategy": "standard_scaling",
-        "mean": 217.84286666666668,
-        "std": 355.7026138959591
+        "mean": 1.3308,
+        "std": 1.5131
       }
     ],
     "warnings": []

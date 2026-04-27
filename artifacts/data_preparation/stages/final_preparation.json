@@ -9,13 +9,21 @@
     "task_type": "regression",
     "final_shape": [
       15000,
-      216
+      35
     ],
-    "n_features": 215,
-    "non_numeric_feature_columns": [],
+    "n_features": 34,
+    "non_numeric_feature_columns": [
+      "room_type_Hotel room",
+      "room_type_Private room",
+      "room_type_Shared room",
+      "host_response_time_missing",
+      "host_response_time_within a day",
+      "host_response_time_within a few hours",
+      "host_response_time_within an hour"
+    ],
     "missing_values_total": 0,
     "warnings": [
-      "Note: Boolean columns from OneHotEncoder are treated as numeric in ML context"
+      "Some boolean/encoded features are stored as non-numeric types"
     ]
   }
 }

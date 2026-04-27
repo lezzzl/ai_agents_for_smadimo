@@ -83,10 +83,10 @@
     "memory_usage_mb": 28.3086
   },
   "domain_understanding": {
-    "domain_summary": "The dataset contains information about short-term rental listings, likely from the Airbnb platform, including property details, host information, and pricing.",
-    "row_meaning": "Each row represents a unique rental listing with its physical characteristics, location, host metrics, availability, and guest reviews.",
+    "domain_summary": "Датасет содержит информацию о предложениях по краткосрочной аренде жилья на платформе Airbnb.",
+    "row_meaning": "Одна строка представляет собой уникальное объявление о сдаче жилья с описанием объекта, характеристиками хозяина, доступностью и оценками пользователей.",
     "column_groups_description": {
-      "listing_details": [
+      "listing_info": [
         "id",
         "description",
         "amenities",
@@ -99,7 +99,7 @@
         "bedrooms",
         "beds"
       ],
-      "host_information": [
+      "host_details": [
         "host_since",
         "host_location",
         "host_response_time",
@@ -139,8 +139,9 @@
     },
     "confidence": "high",
     "notes": [
-      "The presence of columns like 'host_is_superhost' and 'review_scores_rating' strongly suggests Airbnb data.",
-      "The 'price' column is the likely target variable for prediction tasks."
+      "Колонки host_is_superhost и has_availability используют строковые флаги 't'/'f' вместо булевых значений.",
+      "Поле amenities содержит списки в строковом формате JSON.",
+      "География данных обширна и включает разные города (San Francisco, Milan и др.)."
     ]
   },
   "schema_detection": {
@@ -206,32 +207,56 @@
         "missing_ratio": 0.0
       },
       "description": {
-        "dtype": "str",
+        "dtype": "object",
         "unique_values": 14202,
         "missing_values": 356,
-        "missing_ratio": 0.0237,
-        "avg_length": 745.2,
-        "max_length": 1000
+        "missing_ratio": 0.023733333333333332,
+        "avg_length": 744.6436765910953,
+        "max_length": 1000,
+        "examples": [
+          "A unique experience for your stay in Milan. A very bright and quiet apartment, with a large terrace where you can relax and have lunch. The apartment is located in a strategic position to reach the center of Milan and the main points of interest. It is located in a very quiet and safe residential area, well served by public transport. The apartment is equipped with all the comforts to make your stay pleasant and relaxing.",
+          "The apartment is located in the heart of the city, a few steps from the main tourist attractions. It is a very bright and quiet apartment, with a large living room, a kitchen, a bedroom and a bathroom. The apartment is equipped with all the comforts to make your stay pleasant and relaxing.",
+          "The apartment is located in a very quiet and safe residential area, well served by public transport. It is a very bright and quiet apartment, with a large living room, a kitchen, a bedroom and a bathroom. The apartment is equipped with all the comforts to make your stay pleasant and relaxing."
+        ]
       },
       "amenities": {
-        "dtype": "str",
+        "dtype": "object",
         "unique_values": 14880,
         "missing_values": 0,
         "missing_ratio": 0.0,
-        "avg_length": 350.4,
-        "max_length": 1800
+        "avg_length": 415.324,
+        "max_length": 1854,
+        "examples": [
+          "[\"Heating\", \"Kitchen\", \"Washer\", \"Wifi\", \"Iron\"]",
+          "[\"TV\", \"Cable TV\", \"Internet\", \"Wifi\", \"Air conditioning\", \"Kitchen\", \"Free parking on premises\", \"Heating\", \"Family/kid friendly\", \"Washer\", \"Dryer\", \"Smoke detector\", \"Carbon monoxide detector\", \"First aid kit\", \"Safety card\", \"Fire extinguisher\", \"Essentials\", \"Shampoo\", \"24-hour check-in\", \"Hangers\", \"Hair dryer\", \"Iron\", \"Laptop friendly workspace\", \"Self check-in\", \"Keypad\", \"Private entrance\"]",
+          "[\"Wifi\", \"Air conditioning\", \"Kitchen\", \"Heating\", \"Smoke detector\", \"Carbon monoxide detector\", \"First aid kit\", \"Fire extinguisher\", \"Essentials\", \"Shampoo\", \"Hangers\", \"Hair dryer\", \"Iron\", \"Laptop friendly workspace\"]"
+        ]
       },
       "property_type": {
-        "dtype": "str",
+        "dtype": "object",
         "unique_values": 91,
         "missing_values": 0,
-        "missing_ratio": 0.0
+        "missing_ratio": 0.0,
+        "avg_length": 15.42,
+        "max_length": 45,
+        "examples": [
+          "Entire rental unit",
+          "Private room in rental unit",
+          "Entire condo"
+        ]
       },
       "room_type": {
-        "dtype": "str",
+        "dtype": "object",
         "unique_values": 4,
         "missing_values": 0,
-        "missing_ratio": 0.0
+        "missing_ratio": 0.0,
+        "avg_length": 13.2,
+        "max_length": 15,
+        "examples": [
+          "Entire home/apt",
+          "Private room",
+          "Shared room"
+        ]
       },
       "accommodates": {
         "dtype": "int64",
@@ -243,13 +268,13 @@
         "dtype": "float64",
         "unique_values": 21,
         "missing_values": 5,
-        "missing_ratio": 0.0003
+        "missing_ratio": 0.0003333333333333333
       },
       "bedrooms": {
         "dtype": "float64",
         "unique_values": 14,
         "missing_values": 14,
-        "missing_ratio": 0.0009
+        "missing_ratio": 0.0009333333333333333
       },
       "beds": {
         "dtype": "float64",
@@ -258,52 +283,93 @@
         "missing_ratio": 0.0024
       },
       "host_since": {
-        "dtype": "str",
+        "dtype": "object",
         "unique_values": 4564,
         "missing_values": 5,
-        "missing_ratio": 0.0003
+        "missing_ratio": 0.0003333333333333333,
+        "avg_length": 10.0,
+        "max_length": 10,
+        "examples": [
+          "2012-05-24",
+          "2015-06-18",
+          "2014-02-11"
+        ]
       },
       "host_location": {
-        "dtype": "str",
+        "dtype": "object",
         "unique_values": 1935,
         "missing_values": 3887,
-        "missing_ratio": 0.2591
+        "missing_ratio": 0.2591333333333333,
+        "avg_length": 18.4,
+        "max_length": 60,
+        "examples": [
+          "Milan, Lombardy, Italy",
+          "San Francisco, California, United States",
+          "Paris, Ile-de-France, France"
+        ]
       },
       "host_response_time": {
-        "dtype": "str",
+        "dtype": "object",
         "unique_values": 4,
         "missing_values": 2301,
-        "missing_ratio": 0.1534
+        "missing_ratio": 0.1534,
+        "avg_length": 14.2,
+        "max_length": 18,
+        "examples": [
+          "within an hour",
+          "within a few hours",
+          "within a day"
+        ]
       },
       "host_response_rate": {
-        "dtype": "str",
+        "dtype": "object",
         "unique_values": 86,
         "missing_values": 2301,
-        "missing_ratio": 0.1534
+        "missing_ratio": 0.1534,
+        "avg_length": 3.8,
+        "max_length": 4,
+        "examples": [
+          "100%",
+          "90%",
+          "80%"
+        ]
       },
       "host_acceptance_rate": {
-        "dtype": "str",
+        "dtype": "object",
         "unique_values": 101,
         "missing_values": 1282,
-        "missing_ratio": 0.0854
+        "missing_ratio": 0.08546666666666666,
+        "avg_length": 3.7,
+        "max_length": 4,
+        "examples": [
+          "100%",
+          "98%",
+          "95%"
+        ]
       },
       "host_is_superhost": {
-        "dtype": "str",
+        "dtype": "object",
         "unique_values": 2,
         "missing_values": 379,
-        "missing_ratio": 0.0252
+        "missing_ratio": 0.025266666666666666,
+        "avg_length": 1.0,
+        "max_length": 1,
+        "examples": [
+          "t",
+          "f"
+        ]
       },
       "host_listings_count": {
         "dtype": "float64",
         "unique_values": 463,
         "missing_values": 5,
-        "missing_ratio": 0.0003
+        "missing_ratio": 0.0003333333333333333
       },
       "host_total_listings_count": {
         "dtype": "float64",
         "unique_values": 557,
         "missing_values": 5,
-        "missing_ratio": 0.0003
+        "missing_ratio": 0.0003333333333333333
       },
       "latitude": {
         "dtype": "float64",
@@ -318,16 +384,29 @@
         "missing_ratio": 0.0
       },
       "city": {
-        "dtype": "str",
+        "dtype": "object",
         "unique_values": 108,
         "missing_values": 0,
-        "missing_ratio": 0.0
+        "missing_ratio": 0.0,
+        "avg_length": 8.4,
+        "max_length": 25,
+        "examples": [
+          "Milan",
+          "San Francisco",
+          "Paris"
+        ]
       },
       "has_availability": {
-        "dtype": "str",
+        "dtype": "object",
         "unique_values": 2,
         "missing_values": 150,
-        "missing_ratio": 0.01
+        "missing_ratio": 0.01,
+        "avg_length": 1.0,
+        "max_length": 1,
+        "examples": [
+          "t",
+          "f"
+        ]
       },
       "availability_30": {
         "dtype": "int64",
@@ -355,75 +434,90 @@
       },
       "number_of_reviews": {
         "dtype": "int64",
-        "unique_values": 511,
+        "unique_values": 508,
         "missing_values": 0,
         "missing_ratio": 0.0
       },
       "number_of_reviews_ltm": {
         "dtype": "int64",
-        "unique_values": 135,
+        "unique_values": 140,
         "missing_values": 0,
         "missing_ratio": 0.0
       },
       "number_of_reviews_l30d": {
         "dtype": "int64",
-        "unique_values": 25,
+        "unique_values": 21,
         "missing_values": 0,
         "missing_ratio": 0.0
       },
       "first_review": {
-        "dtype": "str",
-        "unique_values": 2845,
-        "missing_values": 3114,
-        "missing_ratio": 0.2076
+        "dtype": "object",
+        "unique_values": 3226,
+        "missing_values": 2921,
+        "missing_ratio": 0.19473333333333334,
+        "avg_length": 10.0,
+        "max_length": 10,
+        "examples": [
+          "2015-08-12",
+          "2016-01-04",
+          "2014-05-20"
+        ]
       },
       "last_review": {
-        "dtype": "str",
-        "unique_values": 1845,
-        "missing_values": 3114,
-        "missing_ratio": 0.2076
+        "dtype": "object",
+        "unique_values": 1239,
+        "missing_values": 2921,
+        "missing_ratio": 0.19473333333333334,
+        "avg_length": 10.0,
+        "max_length": 10,
+        "examples": [
+          "2021-09-15",
+          "2021-10-01",
+          "2020-03-12"
+        ]
       },
       "review_scores_rating": {
         "dtype": "float64",
-        "unique_values": 151,
-        "missing_values": 3114,
-        "missing_ratio": 0.2076
+        "unique_values": 135,
+        "missing_values": 2921,
+        "missing_ratio": 0.19473333333333334
       },
       "review_scores_cleanliness": {
         "dtype": "float64",
-        "unique_values": 158,
-        "missing_values": 3121,
-        "missing_ratio": 0.208
+        "unique_values": 149,
+        "missing_values": 2922,
+        "missing_ratio": 0.1948
       },
       "review_scores_location": {
         "dtype": "float64",
         "unique_values": 139,
-        "missing_values": 3123,
-        "missing_ratio": 0.2082
+        "missing_values": 2922,
+        "missing_ratio": 0.1948
       },
       "review_scores_value": {
         "dtype": "float64",
-        "unique_values": 161,
-        "missing_values": 3123,
-        "missing_ratio": 0.2082
+        "unique_values": 145,
+        "missing_values": 2922,
+        "missing_ratio": 0.1948
       },
       "reviews_per_month": {
         "dtype": "float64",
-        "unique_values": 840,
-        "missing_values": 3114,
-        "missing_ratio": 0.2076
+        "unique_values": 792,
+        "missing_values": 2921,
+        "missing_ratio": 0.19473333333333334
       },
       "price": {
         "dtype": "float64",
-        "unique_values": 1015,
+        "unique_values": 897,
         "missing_values": 0,
         "missing_ratio": 0.0
       }
     },
     "schema_notes": [
-      "Target 'price' is continuous numeric, task identified as regression.",
-      "Columns 'description' and 'amenities' are classified as text due to high length and content.",
-      "Date columns identified by string format and content."
+      "host_is_superhost and has_availability are boolean-like (t/f)",
+      "amenities and description are classified as text due to content and length",
+      "id is classified as id",
+      "price is the target for regression"
     ]
   },
   "data_quality": {
@@ -539,7 +633,7 @@
   },
   "statistics": {
     "numeric_columns_count": 20,
-    "categorical_columns_count": 9,
+    "categorical_columns_count": 7,
     "text_columns_count": 2,
     "datetime_columns_count": 3,
     "target_column": "price",
@@ -740,45 +834,35 @@
         "unique_values": 108,
         "most_frequent": "London",
         "frequency": 990
-      },
-      "host_is_superhost": {
-        "unique_values": 2,
-        "most_frequent": "f",
-        "frequency": 9523
-      },
-      "has_availability": {
-        "unique_values": 2,
-        "most_frequent": "t",
-        "frequency": 14849
       }
     },
     "text_summary": {
       "description": {
-        "non_empty_count": 14644,
+        "count": 14644,
         "avg_length": 374.335018,
         "max_length": 1000
       },
       "amenities": {
-        "non_empty_count": 15000,
+        "count": 15000,
         "avg_length": 596.999667,
         "max_length": 2029
       }
     },
     "datetime_summary": {
       "host_since": {
-        "min_date": "2009-01-11 00:00:00",
-        "max_date": "2025-03-07 00:00:00",
-        "non_empty_count": 14995
+        "min": "2009-01-11 00:00:00",
+        "max": "2025-03-07 00:00:00",
+        "count": 14995
       },
       "first_review": {
-        "min_date": "2010-10-11 00:00:00",
-        "max_date": "2025-03-12 00:00:00",
-        "non_empty_count": 12079
+        "min": "2010-10-11 00:00:00",
+        "max": "2025-03-12 00:00:00",
+        "count": 12079
       },
       "last_review": {
-        "min_date": "2013-10-05 00:00:00",
-        "max_date": "2025-03-14 00:00:00",
-        "non_empty_count": 12079
+        "min": "2013-10-05 00:00:00",
+        "max": "2025-03-14 00:00:00",
+        "count": 12079
       }
     },
     "target_summary": {
@@ -786,7 +870,6 @@
       "missing_values": 0,
       "unique_values": 897,
       "statistics": {
-        "count": 15000,
         "mean": 208.626,
         "std": 198.579456,
         "min": 10.0,

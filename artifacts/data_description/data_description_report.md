@@ -4,10 +4,10 @@
 Dataset contains 15000 rows and 36 columns. Task type: regression.
 
 ## Domain
-The dataset contains information about short-term rental listings, likely from the Airbnb platform, including property details, host information, and pricing.
+Датасет содержит информацию о предложениях по краткосрочной аренде жилья на платформе Airbnb.
 
 ## Row meaning
-Each row represents a unique rental listing with its physical characteristics, location, host metrics, availability, and guest reviews.
+Одна строка представляет собой уникальное объявление о сдаче жилья с описанием объекта, характеристиками хозяина, доступностью и оценками пользователей.
 
 ## Target
 - Target column: price

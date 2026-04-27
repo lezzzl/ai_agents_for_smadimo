@@ -28,13 +28,13 @@
       },
       {
         "column": "host_response_time",
-        "strategy": "missing_string",
+        "strategy": "fill_missing_label",
         "missing_before": 2301,
         "missing_after": 0
       },
       {
         "column": "host_response_rate",
-        "strategy": "missing_string",
+        "strategy": "fill_missing_label",
         "missing_before": 2301,
         "missing_after": 0
       },
@@ -94,19 +94,19 @@
       },
       {
         "column": "beds_per_bedroom",
-        "strategy": "median_fallback",
+        "strategy": "fill_constant_unknown",
         "missing_before": 899,
         "missing_after": 0
       },
       {
         "column": "host_tenure_days",
-        "strategy": "median_fallback",
+        "strategy": "fill_constant_unknown",
         "missing_before": 5,
         "missing_after": 0
       },
       {
         "column": "days_since_last_review",
-        "strategy": "median_fallback",
+        "strategy": "fill_constant_unknown",
         "missing_before": 2921,
         "missing_after": 0
       }
