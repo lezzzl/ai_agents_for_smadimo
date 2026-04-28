@@ -1,0 +1,23 @@
+{
+  "stage": "tune_best_model",
+  "status": "success",
+  "result": {
+    "best_model_name": "RandomForestRegressor",
+    "tuned_model_path": "artifacts/modeling/tuned_models/tuned_RandomForestRegressor.joblib",
+    "tuned_metrics_path": "artifacts/modeling/tuned_models/tuned_RandomForestRegressor_metrics.json",
+    "best_params": {
+      "max_depth": null,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "n_estimators": 200
+    },
+    "metrics": {
+      "mae": 79.60085960066785,
+      "rmse": 127.3625175765156,
+      "r2": 0.6027381249686241
+    },
+    "n_train": 12000,
+    "n_test": 3000,
+    "warnings": []
+  }
+}

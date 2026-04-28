@@ -1,0 +1,15 @@
+{
+  "best_model_name": "RandomForestRegressor",
+  "best_metrics": {
+    "mae": 79.60085960066785,
+    "rmse": 127.3625175765156,
+    "r2": 0.6027381249686241
+  },
+  "best_params": {
+    "max_depth": null,
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "n_estimators": 200
+  },
+  "tuning_used": true
+}

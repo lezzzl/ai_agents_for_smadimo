@@ -1,0 +1,262 @@
+{
+  "stage": "statistics",
+  "status": "success",
+  "result": {
+    "numeric_columns_count": 20,
+    "categorical_columns_count": 4,
+    "text_columns_count": 10,
+    "datetime_columns_count": 0,
+    "target_column": "price",
+    "numeric_summary": {
+      "accommodates": {
+        "count": 15000.0,
+        "mean": 3.925,
+        "std": 2.434729,
+        "min": 1.0,
+        "median": 4.0,
+        "max": 16.0
+      },
+      "bathrooms": {
+        "count": 14995.0,
+        "mean": 1.393698,
+        "std": 0.781525,
+        "min": 0.0,
+        "median": 1.0,
+        "max": 20.0
+      },
+      "bedrooms": {
+        "count": 14986.0,
+        "mean": 1.638329,
+        "std": 1.11518,
+        "min": 0.0,
+        "median": 1.0,
+        "max": 20.0
+      },
+      "beds": {
+        "count": 14964.0,
+        "mean": 2.314087,
+        "std": 1.757538,
+        "min": 0.0,
+        "median": 2.0,
+        "max": 21.0
+      },
+      "host_listings_count": {
+        "count": 14995.0,
+        "mean": 75.423808,
+        "std": 418.637637,
+        "min": 0.0,
+        "median": 3.0,
+        "max": 5282.0
+      },
+      "host_total_listings_count": {
+        "count": 14995.0,
+        "mean": 107.442014,
+        "std": 555.714905,
+        "min": 0.0,
+        "median": 4.0,
+        "max": 9988.0
+      },
+      "latitude": {
+        "count": 15000.0,
+        "mean": 32.499201,
+        "std": 24.747874,
+        "min": -43.36718,
+        "median": 40.284665,
+        "max": 59.961624
+      },
+      "longitude": {
+        "count": 15000.0,
+        "mean": -13.118328,
+        "std": 71.559299,
+        "min": -159.49481,
+        "median": 2.161424,
+        "max": 153.63466
+      },
+      "availability_30": {
+        "count": 15000.0,
+        "mean": 14.724133,
+        "std": 11.30936,
+        "min": 0.0,
+        "median": 15.0,
+        "max": 30.0
+      },
+      "availability_60": {
+        "count": 15000.0,
+        "mean": 32.991,
+        "std": 22.2001,
+        "min": 0.0,
+        "median": 37.0,
+        "max": 60.0
+      },
+      "availability_90": {
+        "count": 15000.0,
+        "mean": 52.981667,
+        "std": 32.597776,
+        "min": 0.0,
+        "median": 61.0,
+        "max": 90.0
+      },
+      "availability_365": {
+        "count": 15000.0,
+        "mean": 211.653133,
+        "std": 119.10165,
+        "min": 0.0,
+        "median": 231.0,
+        "max": 365.0
+      },
+      "number_of_reviews": {
+        "count": 15000.0,
+        "mean": 42.2754,
+        "std": 84.077575,
+        "min": 0.0,
+        "median": 10.0,
+        "max": 1397.0
+      },
+      "number_of_reviews_ltm": {
+        "count": 15000.0,
+        "mean": 10.927533,
+        "std": 17.898724,
+        "min": 0.0,
+        "median": 3.0,
+        "max": 344.0
+      },
+      "number_of_reviews_l30d": {
+        "count": 15000.0,
+        "mean": 0.668133,
+        "std": 1.476305,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 25.0
+      },
+      "review_scores_rating": {
+        "count": 12079.0,
+        "mean": 4.751584,
+        "std": 0.38122,
+        "min": 1.0,
+        "median": 4.86,
+        "max": 5.0
+      },
+      "review_scores_cleanliness": {
+        "count": 12078.0,
+        "mean": 4.744441,
+        "std": 0.39096,
+        "min": 1.0,
+        "median": 4.87,
+        "max": 5.0
+      },
+      "review_scores_location": {
+        "count": 12078.0,
+        "mean": 4.779516,
+        "std": 0.328295,
+        "min": 1.0,
+        "median": 4.88,
+        "max": 5.0
+      },
+      "review_scores_value": {
+        "count": 12078.0,
+        "mean": 4.667521,
+        "std": 0.416428,
+        "min": 1.0,
+        "median": 4.77,
+        "max": 5.0
+      },
+      "reviews_per_month": {
+        "count": 12079.0,
+        "mean": 1.442285,
+        "std": 1.667148,
+        "min": 0.01,
+        "median": 0.87,
+        "max": 26.36
+      }
+    },
+    "categorical_summary": {
+      "room_type": {
+        "unique": 4,
+        "top": "Entire home/apt",
+        "freq": 11683
+      },
+      "host_response_time": {
+        "unique": 4,
+        "top": "within an hour",
+        "freq": 9567
+      },
+      "host_is_superhost": {
+        "unique": 2,
+        "top": "f",
+        "freq": 9523
+      },
+      "has_availability": {
+        "unique": 2,
+        "top": "t",
+        "freq": 14849
+      }
+    },
+    "text_summary": {
+      "description": {
+        "non_empty_count": 14644,
+        "avg_len": 374.335018,
+        "max_len": 1000
+      },
+      "amenities": {
+        "non_empty_count": 15000,
+        "avg_len": 596.999667,
+        "max_len": 2029
+      },
+      "property_type": {
+        "non_empty_count": 15000,
+        "avg_len": 17.381733,
+        "max_len": 34
+      },
+      "host_since": {
+        "non_empty_count": 14995,
+        "avg_len": 10.0,
+        "max_len": 10
+      },
+      "host_location": {
+        "non_empty_count": 11113,
+        "avg_len": 16.012238,
+        "max_len": 48
+      },
+      "host_response_rate": {
+        "non_empty_count": 12699,
+        "avg_len": 3.754784,
+        "max_len": 4
+      },
+      "host_acceptance_rate": {
+        "non_empty_count": 13718,
+        "avg_len": 3.380376,
+        "max_len": 4
+      },
+      "city": {
+        "non_empty_count": 15000,
+        "avg_len": 8.3112,
+        "max_len": 22
+      },
+      "first_review": {
+        "non_empty_count": 12079,
+        "avg_len": 10.0,
+        "max_len": 10
+      },
+      "last_review": {
+        "non_empty_count": 12079,
+        "avg_len": 10.0,
+        "max_len": 10
+      }
+    },
+    "datetime_summary": {},
+    "target_summary": {
+      "target_type": "regression",
+      "missing_count": 0,
+      "unique_count": 897,
+      "summary_stats": {
+        "count": 15000.0,
+        "mean": 208.626,
+        "std": 198.579456,
+        "min": 10.0,
+        "median": 135.0,
+        "max": 1000.0
+      }
+    },
+    "statistics_note": "Подробная статистика была рассчитана по сырому датасету."
+  }
+}

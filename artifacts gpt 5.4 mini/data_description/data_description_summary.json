@@ -1,0 +1,143 @@
+{
+  "agent": "data_description_agent",
+  "status": "success",
+  "summary": "Dataset contains 15000 rows and 36 columns. Task type: regression.",
+  "decisions": {
+    "domain_summary": "Dataset appears to be Airbnb-style short-term rental listings with property, host, location, availability, review, and price information.",
+    "row_meaning": "Each row likely represents one rental listing and its associated host, location, availability, review scores, and nightly price.",
+    "target_column": "price",
+    "task_type": "regression",
+    "schema": {
+      "numeric": [
+        "accommodates",
+        "bathrooms",
+        "bedrooms",
+        "beds",
+        "host_listings_count",
+        "host_total_listings_count",
+        "latitude",
+        "longitude",
+        "availability_30",
+        "availability_60",
+        "availability_90",
+        "availability_365",
+        "number_of_reviews",
+        "number_of_reviews_ltm",
+        "number_of_reviews_l30d",
+        "review_scores_rating",
+        "review_scores_cleanliness",
+        "review_scores_location",
+        "review_scores_value",
+        "reviews_per_month"
+      ],
+      "categorical": [
+        "room_type",
+        "host_response_time",
+        "host_is_superhost",
+        "has_availability"
+      ],
+      "text": [
+        "description",
+        "amenities",
+        "property_type",
+        "host_since",
+        "host_location",
+        "host_response_rate",
+        "host_acceptance_rate",
+        "city",
+        "first_review",
+        "last_review"
+      ],
+      "datetime": [],
+      "boolean_like": [],
+      "id": [
+        "id"
+      ],
+      "target": [
+        "price"
+      ]
+    },
+    "data_quality_summary": {
+      "missing_values_total": 31176,
+      "duplicate_rows": 0,
+      "constant_columns_count": 0,
+      "high_cardinality_columns_count": 5
+    }
+  },
+  "artifacts": {
+    "basic_overview_path": "artifacts/data_description/stages/basic_overview.json",
+    "domain_understanding_path": "artifacts/data_description/stages/domain_understanding.json",
+    "schema_detection_path": "artifacts/data_description/stages/schema_detection.json",
+    "data_quality_path": "artifacts/data_description/stages/data_quality.json",
+    "statistics_path": "artifacts/data_description/stages/statistics.json",
+    "data_description_summary_path": "artifacts/data_description/data_description_summary.json",
+    "eda_artifacts_path": "artifacts/data_description/eda_artifacts.json",
+    "data_description_report_path": "artifacts/data_description/data_description_report.md",
+    "eda_stages_dir": "artifacts/data_description/stages"
+  },
+  "next_input": {
+    "target_column": "price",
+    "task_type": "regression",
+    "schema": {
+      "numeric": [
+        "accommodates",
+        "bathrooms",
+        "bedrooms",
+        "beds",
+        "host_listings_count",
+        "host_total_listings_count",
+        "latitude",
+        "longitude",
+        "availability_30",
+        "availability_60",
+        "availability_90",
+        "availability_365",
+        "number_of_reviews",
+        "number_of_reviews_ltm",
+        "number_of_reviews_l30d",
+        "review_scores_rating",
+        "review_scores_cleanliness",
+        "review_scores_location",
+        "review_scores_value",
+        "reviews_per_month"
+      ],
+      "categorical": [
+        "room_type",
+        "host_response_time",
+        "host_is_superhost",
+        "has_availability"
+      ],
+      "text": [
+        "description",
+        "amenities",
+        "property_type",
+        "host_since",
+        "host_location",
+        "host_response_rate",
+        "host_acceptance_rate",
+        "city",
+        "first_review",
+        "last_review"
+      ],
+      "datetime": [],
+      "boolean_like": [],
+      "id": [
+        "id"
+      ],
+      "target": [
+        "price"
+      ]
+    },
+    "data_summary": {
+      "n_rows": 15000,
+      "n_columns": 36,
+      "domain_summary": "Dataset appears to be Airbnb-style short-term rental listings with property, host, location, availability, review, and price information.",
+      "row_meaning": "Each row likely represents one rental listing and its associated host, location, availability, review scores, and nightly price.",
+      "missing_values_total": 31176,
+      "duplicate_rows": 0,
+      "statistics_path": "artifacts/data_description/stages/statistics.json",
+      "eda_artifacts_path": "artifacts/data_description/eda_artifacts.json"
+    }
+  },
+  "reason": null
+}

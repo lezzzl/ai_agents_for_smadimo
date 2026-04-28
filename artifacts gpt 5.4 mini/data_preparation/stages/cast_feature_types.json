@@ -1,0 +1,66 @@
+{
+  "stage": "cast_feature_types",
+  "status": "success",
+  "result": {
+    "input_path": "./rent_predictions/airbnb_train_fe_15000.csv",
+    "output_path": "artifacts/data_preparation/intermediate/01_casted.csv",
+    "target_column": "price",
+    "task_type": "regression",
+    "converted_columns": {
+      "numeric": [
+        "accommodates",
+        "bathrooms",
+        "bedrooms",
+        "beds",
+        "host_listings_count",
+        "host_total_listings_count",
+        "latitude",
+        "longitude",
+        "availability_30",
+        "availability_60",
+        "availability_90",
+        "availability_365",
+        "number_of_reviews",
+        "number_of_reviews_ltm",
+        "number_of_reviews_l30d",
+        "review_scores_rating",
+        "review_scores_cleanliness",
+        "review_scores_location",
+        "review_scores_value",
+        "reviews_per_month"
+      ],
+      "datetime": [],
+      "categorical": [
+        "room_type",
+        "host_response_time",
+        "host_is_superhost",
+        "has_availability"
+      ],
+      "text": [
+        "description",
+        "amenities",
+        "property_type",
+        "host_since",
+        "host_location",
+        "host_response_rate",
+        "host_acceptance_rate",
+        "city",
+        "first_review",
+        "last_review",
+        "id"
+      ],
+      "boolean_like": [],
+      "target": [
+        "price"
+      ]
+    },
+    "skipped_columns": [],
+    "warnings": [
+      "host_since appears datetime-like but kept as text per schema.",
+      "first_review appears datetime-like but kept as text per schema.",
+      "last_review appears datetime-like but kept as text per schema.",
+      "host_response_rate contains percentage strings; kept as text per schema.",
+      "host_acceptance_rate contains percentage strings; kept as text per schema."
+    ]
+  }
+}

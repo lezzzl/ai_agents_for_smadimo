@@ -1,0 +1,50 @@
+{
+  "stage": "compare_models",
+  "status": "success",
+  "result": {
+    "best_job_id": "model_2",
+    "best_model_name": "RandomForestRegressor",
+    "best_model_path": "artifacts/modeling/models/model_2_RandomForestRegressor.joblib",
+    "best_metrics": {
+      "mae": 80.83463333333333,
+      "rmse": 128.02715543066114,
+      "r2": 0.5985811058443642
+    },
+    "primary_metric": "rmse",
+    "reason": "Выбрана модель с минимальным rmse: 128.02715543066114",
+    "all_results": [
+      {
+        "job_id": "model_1",
+        "model_name": "Ridge",
+        "task_type": "regression",
+        "model_artifact_path": "artifacts/modeling/models/model_1_Ridge.joblib",
+        "metrics_path": "artifacts/modeling/metrics/model_1_Ridge_metrics.json",
+        "metrics": {
+          "mae": 115.23548981095551,
+          "rmse": 176.2094633435424,
+          "r2": 0.23958254946252855
+        },
+        "n_train": 12000,
+        "n_test": 3000,
+        "warnings": [],
+        "status": "success"
+      },
+      {
+        "job_id": "model_2",
+        "model_name": "RandomForestRegressor",
+        "task_type": "regression",
+        "model_artifact_path": "artifacts/modeling/models/model_2_RandomForestRegressor.joblib",
+        "metrics_path": "artifacts/modeling/metrics/model_2_RandomForestRegressor_metrics.json",
+        "metrics": {
+          "mae": 80.83463333333333,
+          "rmse": 128.02715543066114,
+          "r2": 0.5985811058443642
+        },
+        "n_train": 12000,
+        "n_test": 3000,
+        "warnings": [],
+        "status": "success"
+      }
+    ]
+  }
+}

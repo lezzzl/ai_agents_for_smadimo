@@ -1,0 +1,112 @@
+{
+  "stage": "create_new_features",
+  "status": "success",
+  "result": {
+    "input_path": "artifacts/data_preparation/intermediate/01_casted.csv",
+    "output_path": "artifacts/data_preparation/intermediate/02_features.csv",
+    "target_column": "price",
+    "created_features": [
+      {
+        "name": "beds_per_accommodates",
+        "source_columns": [
+          "beds",
+          "accommodates"
+        ],
+        "reason": "Показывает плотность размещения: число кроватей на гостя может отражать комфорт и вместимость."
+      },
+      {
+        "name": "accommodates_per_bedroom",
+        "source_columns": [
+          "accommodates",
+          "bedrooms"
+        ],
+        "reason": "Отношение вместимости к числу спален помогает уловить формат жилья и уровень комфорта."
+      },
+      {
+        "name": "reviews_per_month_per_review",
+        "source_columns": [
+          "reviews_per_month",
+          "number_of_reviews"
+        ],
+        "reason": "Связывает текущую активность отзывов с накопленным числом отзывов и отражает вовлеченность объекта."
+      },
+      {
+        "name": "availability_ratio_30_365",
+        "source_columns": [
+          "availability_30",
+          "availability_365"
+        ],
+        "reason": "Сравнивает краткосрочную и годовую доступность, что может отражать сезонность и спрос."
+      },
+      {
+        "name": "host_listing_concentration",
+        "source_columns": [
+          "host_listings_count",
+          "host_total_listings_count"
+        ],
+        "reason": "Показывает долю активных объявлений среди всех листингов хоста и может отражать масштаб и специализацию."
+      },
+      {
+        "name": "review_scores_mean",
+        "source_columns": [
+          "review_scores_rating",
+          "review_scores_cleanliness",
+          "review_scores_location",
+          "review_scores_value"
+        ],
+        "reason": "Средняя оценка по ключевым рейтингам агрегирует качество объекта по нескольким аспектам."
+      },
+      {
+        "name": "description_char_len",
+        "source_columns": [
+          "description"
+        ],
+        "reason": "Длина описания может отражать уровень детализации и информативность объявления."
+      },
+      {
+        "name": "description_word_count",
+        "source_columns": [
+          "description"
+        ],
+        "reason": "Количество слов в описании служит прокси для полноты описания объекта."
+      },
+      {
+        "name": "amenities_item_count",
+        "source_columns": [
+          "amenities"
+        ],
+        "reason": "Число перечисленных удобств может быть сильным сигналом качества и ценности объекта."
+      },
+      {
+        "name": "property_type_char_len",
+        "source_columns": [
+          "property_type"
+        ],
+        "reason": "Длина текстового типа жилья может косвенно отражать сложность/детализацию классификации объекта."
+      },
+      {
+        "name": "host_tenure_days",
+        "source_columns": [
+          "host_since"
+        ],
+        "reason": "Извлекает возраст/давность из host_since, что может отражать опыт хоста или свежесть активности."
+      },
+      {
+        "name": "days_since_first_review",
+        "source_columns": [
+          "first_review"
+        ],
+        "reason": "Извлекает возраст/давность из first_review, что может отражать опыт хоста или свежесть активности."
+      },
+      {
+        "name": "days_since_last_review",
+        "source_columns": [
+          "last_review"
+        ],
+        "reason": "Извлекает возраст/давность из last_review, что может отражать опыт хоста или свежесть активности."
+      }
+    ],
+    "skipped_features": [],
+    "warnings": []
+  }
+}

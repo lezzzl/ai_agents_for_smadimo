@@ -1,0 +1,50 @@
+{
+  "numeric": [
+    "accommodates",
+    "bathrooms",
+    "bedrooms",
+    "beds",
+    "host_listings_count",
+    "host_total_listings_count",
+    "latitude",
+    "longitude",
+    "availability_30",
+    "availability_60",
+    "availability_90",
+    "availability_365",
+    "number_of_reviews",
+    "number_of_reviews_ltm",
+    "number_of_reviews_l30d",
+    "review_scores_rating",
+    "review_scores_cleanliness",
+    "review_scores_location",
+    "review_scores_value",
+    "reviews_per_month"
+  ],
+  "categorical": [
+    "property_type",
+    "room_type",
+    "host_response_time",
+    "host_location",
+    "city"
+  ],
+  "text": [
+    "description",
+    "amenities",
+    "host_is_superhost"
+  ],
+  "datetime": [
+    "host_since",
+    "first_review",
+    "last_review"
+  ],
+  "boolean_like": [
+    "has_availability"
+  ],
+  "id": [
+    "id"
+  ],
+  "target": [
+    "price"
+  ]
+}

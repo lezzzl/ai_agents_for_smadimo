@@ -1,0 +1,365 @@
+{
+  "stage": "schema_detection",
+  "status": "success",
+  "result": {
+    "target_column": "price",
+    "task_type": "regression",
+    "schema": {
+      "numeric": [
+        "accommodates",
+        "bathrooms",
+        "bedrooms",
+        "beds",
+        "host_listings_count",
+        "host_total_listings_count",
+        "latitude",
+        "longitude",
+        "availability_30",
+        "availability_60",
+        "availability_90",
+        "availability_365",
+        "number_of_reviews",
+        "number_of_reviews_ltm",
+        "number_of_reviews_l30d",
+        "review_scores_rating",
+        "review_scores_cleanliness",
+        "review_scores_location",
+        "review_scores_value",
+        "reviews_per_month"
+      ],
+      "categorical": [
+        "room_type",
+        "host_response_time",
+        "host_is_superhost",
+        "has_availability"
+      ],
+      "text": [
+        "description",
+        "amenities",
+        "property_type",
+        "host_since",
+        "host_location",
+        "host_response_rate",
+        "host_acceptance_rate",
+        "city",
+        "first_review",
+        "last_review"
+      ],
+      "datetime": [],
+      "boolean_like": [],
+      "id": [
+        "id"
+      ],
+      "target": [
+        "price"
+      ]
+    },
+    "column_profile": {
+      "id": {
+        "dtype": "int64",
+        "n_unique_non_missing": 15000,
+        "n_missing": 0,
+        "missing_share": 0.0
+      },
+      "description": {
+        "dtype": "str",
+        "n_unique_non_missing": 14202,
+        "n_missing": 356,
+        "missing_share": 0.023733333333333332,
+        "avg_str_len": 374.3350177547118,
+        "max_str_len": 1000,
+        "examples": [
+          "Great spot in an excellent neighborhood, you can not ask for a better place. It is walking distance to all tourist attractions.<br /> The apartment is zen, quiet, and cozy only a couple blocks from the Bay, Fisherman's Wharf and Pier...",
+          "This apartment was just renovated and it was taken care in the smallest of details.<br />Our motto is “a Good house must be Made, not bought”.<br />It is located just 8’ walk from the Navigli.<br />The Duomo is about a 20-minute tram ride away...",
+          "Welcome to our stunning beachfront apartment, where the ocean meets comfort and luxury. This bright and airy retreat offers breathtaking panoramic views of the sea from the moment you step inside. The spacious living area features large windows..."
+        ]
+      },
+      "amenities": {
+        "dtype": "str",
+        "n_unique_non_missing": 14880,
+        "n_missing": 0,
+        "missing_share": 0.0,
+        "avg_str_len": 596.9996666666667,
+        "max_str_len": 2029,
+        "examples": [
+          "[\"Self check-in\", \"Essentials\", \"Stove\", \"Cooking basics\", \"Lockbox\", \"Coffee maker\", \"Iron\", \"Dishwasher\", \"Refrigerator\", \"Heating\", \"Free street parking\", \"Wifi\", \"Hair dryer\", \"Kitchen\", \"Oven\", \"Dryer\", \"Dishes and silverware\", \"Air conditioning\", \"Washer\"]",
+          "[\"Lockbox\", \"Bed linens\", \"Laundromat nearby\", \"Smoke alarm\", \"Candy refrigerator\", \"Iron\", \"Hangers\", \"Air conditioning\", \"Extra pillows and blankets\", \"Single level home\", \"Dishes and silverware\", \"Hot water kettle\", \"First aid kit\", \"Luggage dropoff allowed\", \"Essentials\", \"Board games\", \"Induction stove\", \"Hot water\", \"TV\", \"Self check-in\", \"Body soap\", \"Free street parking\", ...]",
+          "[\"Outdoor dining area\", \"Fire extinguisher\", \"Wifi\", \"Smoke alarm\", \"First aid kit\", \"Pool table\", \"Beach access – Beachfront\", \"Noise decibel monitors on property\", \"Dedicated workspace\", \"Carbon monoxide alarm\", \"Washer\", \"Exercise equipment\", \"Kitchen\", \"Pool\", \"TV\", \"Paid parking on premises\", \"Outdoor shower\", \"Air conditioning\"]"
+        ]
+      },
+      "property_type": {
+        "dtype": "str",
+        "n_unique_non_missing": 91,
+        "n_missing": 0,
+        "missing_share": 0.0,
+        "avg_str_len": 17.381733333333333,
+        "max_str_len": 34,
+        "examples": [
+          "Entire rental unit",
+          "Entire vacation home",
+          "Entire rental unit"
+        ]
+      },
+      "room_type": {
+        "dtype": "str",
+        "n_unique_non_missing": 4,
+        "n_missing": 0,
+        "missing_share": 0.0,
+        "avg_str_len": 14.322466666666667,
+        "max_str_len": 15,
+        "examples": [
+          "Entire home/apt",
+          "Entire home/apt",
+          "Entire home/apt"
+        ]
+      },
+      "accommodates": {
+        "dtype": "int64",
+        "n_unique_non_missing": 16,
+        "n_missing": 0,
+        "missing_share": 0.0
+      },
+      "bathrooms": {
+        "dtype": "float64",
+        "n_unique_non_missing": 21,
+        "n_missing": 123,
+        "missing_share": 0.0082
+      },
+      "bedrooms": {
+        "dtype": "float64",
+        "n_unique_non_missing": 17,
+        "n_missing": 62,
+        "missing_share": 0.0041333333333333335
+      },
+      "beds": {
+        "dtype": "float64",
+        "n_unique_non_missing": 44,
+        "n_missing": 216,
+        "missing_share": 0.0144
+      },
+      "host_since": {
+        "dtype": "str",
+        "n_unique_non_missing": 4038,
+        "n_missing": 0,
+        "missing_share": 0.0,
+        "avg_str_len": 10.0,
+        "max_str_len": 10,
+        "examples": [
+          "2010-08-09",
+          "2012-02-16",
+          "2017-08-08"
+        ]
+      },
+      "host_location": {
+        "dtype": "str",
+        "n_unique_non_missing": 2146,
+        "n_missing": 0,
+        "missing_share": 0.0,
+        "avg_str_len": 25.180533333333333,
+        "max_str_len": 108,
+        "examples": [
+          "Brooklyn, NY",
+          "Brooklyn, NY",
+          "Lyon, France"
+        ]
+      },
+      "host_response_time": {
+        "dtype": "str",
+        "n_unique_non_missing": 4,
+        "n_missing": 4868,
+        "missing_share": 0.3245333333333333,
+        "avg_str_len": 11.97134723411845,
+        "max_str_len": 14,
+        "examples": [
+          "within an hour",
+          "within a day",
+          "a few hours"
+        ]
+      },
+      "host_response_rate": {
+        "dtype": "str",
+        "n_unique_non_missing": 79,
+        "n_missing": 4747,
+        "missing_share": 0.3164666666666667,
+        "avg_str_len": 4.0,
+        "max_str_len": 4,
+        "examples": [
+          "100%",
+          "100%",
+          "100%"
+        ]
+      },
+      "host_acceptance_rate": {
+        "dtype": "str",
+        "n_unique_non_missing": 99,
+        "n_missing": 4883,
+        "missing_share": 0.3255333333333333,
+        "avg_str_len": 4.0,
+        "max_str_len": 4,
+        "examples": [
+          "100%",
+          "100%",
+          "100%"
+        ]
+      },
+      "host_is_superhost": {
+        "dtype": "str",
+        "n_unique_non_missing": 2,
+        "n_missing": 0,
+        "missing_share": 0.0,
+        "avg_str_len": 4.0,
+        "max_str_len": 4,
+        "examples": [
+          "f",
+          "f",
+          "f"
+        ]
+      },
+      "host_listings_count": {
+        "dtype": "float64",
+        "n_unique_non_missing": 78,
+        "n_missing": 412,
+        "missing_share": 0.027466666666666664
+      },
+      "host_total_listings_count": {
+        "dtype": "float64",
+        "n_unique_non_missing": 84,
+        "n_missing": 412,
+        "missing_share": 0.027466666666666664
+      },
+      "latitude": {
+        "dtype": "float64",
+        "n_unique_non_missing": 14588,
+        "n_missing": 0,
+        "missing_share": 0.0
+      },
+      "longitude": {
+        "dtype": "float64",
+        "n_unique_non_missing": 14609,
+        "n_missing": 0,
+        "missing_share": 0.0
+      },
+      "city": {
+        "dtype": "str",
+        "n_unique_non_missing": 40,
+        "n_missing": 0,
+        "missing_share": 0.0,
+        "avg_str_len": 11.617333333333335,
+        "max_str_len": 20,
+        "examples": [
+          "Bangkok",
+          "Singapore",
+          "Singapore"
+        ]
+      },
+      "has_availability": {
+        "dtype": "str",
+        "n_unique_non_missing": 1,
+        "n_missing": 0,
+        "missing_share": 0.0,
+        "avg_str_len": 3.0,
+        "max_str_len": 3,
+        "examples": [
+          "t",
+          "t",
+          "t"
+        ]
+      },
+      "availability_30": {
+        "dtype": "int64",
+        "n_unique_non_missing": 31,
+        "n_missing": 0,
+        "missing_share": 0.0
+      },
+      "availability_60": {
+        "dtype": "int64",
+        "n_unique_non_missing": 61,
+        "n_missing": 0,
+        "missing_share": 0.0
+      },
+      "availability_90": {
+        "dtype": "int64",
+        "n_unique_non_missing": 91,
+        "n_missing": 0,
+        "missing_share": 0.0
+      },
+      "availability_365": {
+        "dtype": "int64",
+        "n_unique_non_missing": 366,
+        "n_missing": 0,
+        "missing_share": 0.0
+      },
+      "number_of_reviews": {
+        "dtype": "int64",
+        "n_unique_non_missing": 313,
+        "n_missing": 0,
+        "missing_share": 0.0
+      },
+      "number_of_reviews_ltm": {
+        "dtype": "int64",
+        "n_unique_non_missing": 96,
+        "n_missing": 0,
+        "missing_share": 0.0
+      },
+      "number_of_reviews_l30d": {
+        "dtype": "int64",
+        "n_unique_non_missing": 19,
+        "n_missing": 0,
+        "missing_share": 0.0
+      },
+      "first_review": {
+        "dtype": "str",
+        "n_unique_non_missing": 2608,
+        "n_missing": 2955,
+        "missing_share": 0.197
+      },
+      "last_review": {
+        "dtype": "str",
+        "n_unique_non_missing": 3658,
+        "n_missing": 2955,
+        "missing_share": 0.197
+      },
+      "review_scores_rating": {
+        "dtype": "float64",
+        "n_unique_non_missing": 52,
+        "n_missing": 2955,
+        "missing_share": 0.197
+      },
+      "review_scores_cleanliness": {
+        "dtype": "float64",
+        "n_unique_non_missing": 71,
+        "n_missing": 3584,
+        "missing_share": 0.23893333333333333
+      },
+      "review_scores_location": {
+        "dtype": "float64",
+        "n_unique_non_missing": 65,
+        "n_missing": 3578,
+        "missing_share": 0.23853333333333335
+      },
+      "review_scores_value": {
+        "dtype": "float64",
+        "n_unique_non_missing": 64,
+        "n_missing": 3578,
+        "missing_share": 0.23853333333333335
+      },
+      "reviews_per_month": {
+        "dtype": "float64",
+        "n_unique_non_missing": 290,
+        "n_missing": 2955,
+        "missing_share": 0.197
+      },
+      "price": {
+        "dtype": "float64",
+        "n_unique_non_missing": 1906,
+        "n_missing": 0,
+        "missing_share": 0.0
+      }
+    },
+    "schema_notes": [
+      "Target column price exists in the dataset and is numeric, so the task is treated as regression.",
+      "Object columns with long free-text or list-like content were assigned to text; short low-cardinality strings to categorical.",
+      "Datetime-like columns were not detected by dtype; string date columns were kept as text based on length and name hints."
+    ]
+  }
+}

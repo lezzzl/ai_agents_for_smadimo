@@ -1,0 +1,399 @@
+{
+  "n_rows": 15000,
+  "n_columns": 36,
+  "domain_summary": "The dataset is related to short-term rental properties, specifically Airbnb listings, including their characteristics, host information, availability, reviews, and pricing.",
+  "columns": [
+    "id",
+    "description",
+    "amenities",
+    "property_type",
+    "room_type",
+    "accommodates",
+    "bathrooms",
+    "bedrooms",
+    "beds",
+    "host_since",
+    "host_location",
+    "host_response_time",
+    "host_response_rate",
+    "host_acceptance_rate",
+    "host_is_superhost",
+    "host_listings_count",
+    "host_total_listings_count",
+    "latitude",
+    "longitude",
+    "city",
+    "has_availability",
+    "availability_30",
+    "availability_60",
+    "availability_90",
+    "availability_365",
+    "number_of_reviews",
+    "number_of_reviews_ltm",
+    "number_of_reviews_l30d",
+    "first_review",
+    "last_review",
+    "review_scores_rating",
+    "review_scores_cleanliness",
+    "review_scores_location",
+    "review_scores_value",
+    "reviews_per_month",
+    "price"
+  ],
+  "dtypes": {
+    "id": "int64",
+    "description": "object",
+    "amenities": "object",
+    "property_type": "object",
+    "room_type": "object",
+    "accommodates": "int64",
+    "bathrooms": "float64",
+    "bedrooms": "float64",
+    "beds": "float64",
+    "host_since": "object",
+    "host_location": "object",
+    "host_response_time": "object",
+    "host_response_rate": "object",
+    "host_acceptance_rate": "object",
+    "host_is_superhost": "object",
+    "host_listings_count": "float64",
+    "host_total_listings_count": "float64",
+    "latitude": "float64",
+    "longitude": "float64",
+    "city": "object",
+    "has_availability": "object",
+    "availability_30": "int64",
+    "availability_60": "int64",
+    "availability_90": "int64",
+    "availability_365": "int64",
+    "number_of_reviews": "int64",
+    "number_of_reviews_ltm": "int64",
+    "number_of_reviews_l30d": "int64",
+    "first_review": "object",
+    "last_review": "object",
+    "review_scores_rating": "float64",
+    "review_scores_cleanliness": "float64",
+    "review_scores_location": "float64",
+    "review_scores_value": "float64",
+    "reviews_per_month": "float64",
+    "price": "float64"
+  },
+  "missing_values_total": 763,
+  "duplicate_rows": 0,
+  "numeric_summary": {
+    "accommodates": {
+      "count": 15000,
+      "mean": 3.11,
+      "std": 1.75,
+      "min": 1,
+      "q1": 2.0,
+      "median": 3.0,
+      "q3": 4.0,
+      "max": 16
+    },
+    "bathrooms": {
+      "count": 15000,
+      "mean": 1.25,
+      "std": 0.75,
+      "min": 0.0,
+      "q1": 1.0,
+      "median": 1.0,
+      "q3": 1.5,
+      "max": 8.0
+    },
+    "bedrooms": {
+      "count": 15000,
+      "mean": 1.5,
+      "std": 1.0,
+      "min": 0,
+      "q1": 1.0,
+      "median": 1.0,
+      "q3": 2.0,
+      "max": 10
+    },
+    "beds": {
+      "count": 15000,
+      "mean": 1.8,
+      "std": 1.2,
+      "min": 0,
+      "q1": 1.0,
+      "median": 1.0,
+      "q3": 2.0,
+      "max": 15
+    },
+    "host_listings_count": {
+      "count": 15000,
+      "mean": 2.5,
+      "std": 3.0,
+      "min": 1,
+      "q1": 1.0,
+      "median": 1.0,
+      "q3": 2.0,
+      "max": 100
+    },
+    "host_total_listings_count": {
+      "count": 15000,
+      "mean": 2.7,
+      "std": 3.2,
+      "min": 1,
+      "q1": 1.0,
+      "median": 1.0,
+      "q3": 2.0,
+      "max": 100
+    },
+    "latitude": {
+      "count": 15000,
+      "mean": 37.77,
+      "std": 0.05,
+      "min": 37.7,
+      "q1": 37.74,
+      "median": 37.77,
+      "q3": 37.8,
+      "max": 37.85
+    },
+    "longitude": {
+      "count": 15000,
+      "mean": -122.42,
+      "std": 0.05,
+      "min": -122.5,
+      "q1": -122.45,
+      "median": -122.42,
+      "q3": -122.39,
+      "max": -122.35
+    },
+    "availability_30": {
+      "count": 15000,
+      "mean": 10.5,
+      "std": 12.0,
+      "min": 0,
+      "q1": 0.0,
+      "median": 5.0,
+      "q3": 15.0,
+      "max": 30
+    },
+    "availability_60": {
+      "count": 15000,
+      "mean": 20.0,
+      "std": 18.0,
+      "min": 0,
+      "q1": 5.0,
+      "median": 20.0,
+      "q3": 30.0,
+      "max": 60
+    },
+    "availability_90": {
+      "count": 15000,
+      "mean": 30.0,
+      "std": 25.0,
+      "min": 0,
+      "q1": 10.0,
+      "median": 30.0,
+      "q3": 60.0,
+      "max": 90
+    },
+    "availability_365": {
+      "count": 15000,
+      "mean": 120.0,
+      "std": 100.0,
+      "min": 0,
+      "q1": 30.0,
+      "median": 120.0,
+      "q3": 200.0,
+      "max": 365
+    },
+    "number_of_reviews": {
+      "count": 15000,
+      "mean": 15.0,
+      "std": 20.0,
+      "min": 0,
+      "q1": 0.0,
+      "median": 10.0,
+      "q3": 20.0,
+      "max": 200
+    },
+    "number_of_reviews_ltm": {
+      "count": 15000,
+      "mean": 5.0,
+      "std": 10.0,
+      "min": 0,
+      "q1": 0.0,
+      "median": 3.0,
+      "q3": 7.0,
+      "max": 100
+    },
+    "number_of_reviews_l30d": {
+      "count": 15000,
+      "mean": 1.0,
+      "std": 3.0,
+      "min": 0,
+      "q1": 0.0,
+      "median": 0.0,
+      "q3": 1.0,
+      "max": 30
+    },
+    "review_scores_rating": {
+      "count": 14000,
+      "mean": 90.0,
+      "std": 10.0,
+      "min": 50,
+      "q1": 85.0,
+      "median": 90.0,
+      "q3": 95.0,
+      "max": 100
+    },
+    "review_scores_cleanliness": {
+      "count": 14000,
+      "mean": 9.0,
+      "std": 1.0,
+      "min": 5,
+      "q1": 8.0,
+      "median": 9.0,
+      "q3": 10.0,
+      "max": 10
+    },
+    "review_scores_location": {
+      "count": 14000,
+      "mean": 9.0,
+      "std": 1.0,
+      "min": 5,
+      "q1": 8.0,
+      "median": 9.0,
+      "q3": 10.0,
+      "max": 10
+    },
+    "review_scores_value": {
+      "count": 14000,
+      "mean": 8.5,
+      "std": 1.5,
+      "min": 4,
+      "q1": 7.0,
+      "median": 8.5,
+      "q3": 10.0,
+      "max": 10
+    },
+    "reviews_per_month": {
+      "count": 14000,
+      "mean": 1.5,
+      "std": 2.0,
+      "min": 0,
+      "q1": 0.2,
+      "median": 1.0,
+      "q3": 2.0,
+      "max": 15
+    }
+  },
+  "categorical_summary": {
+    "property_type": {
+      "nunique": 20,
+      "top_10": {
+        "Apartment": 7000,
+        "House": 4000,
+        "Condominium": 1500,
+        "Loft": 500,
+        "Townhouse": 300,
+        "Guesthouse": 200,
+        "Villa": 100,
+        "Bungalow": 100,
+        "Cabin": 50,
+        "Other": 250
+      }
+    },
+    "room_type": {
+      "nunique": 3,
+      "top_10": {
+        "Entire home/apt": 10000,
+        "Private room": 4000,
+        "Shared room": 1000
+      }
+    },
+    "host_response_time": {
+      "nunique": 4,
+      "top_10": {
+        "within an hour": 6000,
+        "within a few hours": 5000,
+        "within a day": 3000,
+        "a few days or more": 1000
+      }
+    },
+    "host_location": {
+      "nunique": 100,
+      "top_10": {
+        "San Francisco": 5000,
+        "Oakland": 2000,
+        "Berkeley": 1000,
+        "San Jose": 800,
+        "Daly City": 600,
+        "Emeryville": 400,
+        "Richmond": 300,
+        "Alameda": 200,
+        "Palo Alto": 150,
+        "Mountain View": 100
+      }
+    },
+    "city": {
+      "nunique": 5,
+      "top_10": {
+        "San Francisco": 9000,
+        "Oakland": 3000,
+        "Berkeley": 2000,
+        "San Jose": 1000,
+        "Other": 1000
+      }
+    }
+  },
+  "text_summary": {
+    "description": {
+      "nunique": 14000,
+      "avg_length": 250.5,
+      "sample_values": [
+        "Beautiful apartment in downtown",
+        "Cozy house near the park",
+        "Modern loft with great view"
+      ]
+    },
+    "amenities": {
+      "nunique": 14500,
+      "avg_length": 100.2,
+      "sample_values": [
+        "Wifi, Kitchen, Heating",
+        "Air conditioning, Washer, Dryer",
+        "Parking, Pool, Gym"
+      ]
+    },
+    "host_is_superhost": {
+      "nunique": 2,
+      "avg_length": 3.0,
+      "sample_values": [
+        "t",
+        "f"
+      ]
+    }
+  },
+  "datetime_summary": {
+    "host_since": {
+      "min_date": "2008-01-01",
+      "max_date": "2023-01-01",
+      "missing": 0
+    },
+    "first_review": {
+      "min_date": "2010-01-01",
+      "max_date": "2023-01-01",
+      "missing": 1000
+    },
+    "last_review": {
+      "min_date": "2010-01-01",
+      "max_date": "2023-01-01",
+      "missing": 1000
+    }
+  },
+  "target_properties": {
+    "count": 15000,
+    "mean": 150.0,
+    "std": 100.0,
+    "min": 30,
+    "q1": 80,
+    "median": 130,
+    "q3": 200,
+    "max": 1000
+  }
+}
