@@ -1,0 +1,15 @@
+{
+  "agent": "reporting_agent",
+  "status": "success",
+  "skipped": false,
+  "summary": "Final report was created and saved.",
+  "artifacts": {
+    "final_report_path": "artifacts/reporting/final_report.md",
+    "reporting_summary_path": "artifacts/reporting/reporting_summary.json",
+    "reporting_stage_path": "artifacts/reporting/reporting_agent_result.json"
+  },
+  "previous_metrics_path": "artifacts/modeling/final_metrics.json",
+  "previous_best_model_path": "artifacts/modeling/best_model.joblib",
+  "next_input": {},
+  "reason": null
+}

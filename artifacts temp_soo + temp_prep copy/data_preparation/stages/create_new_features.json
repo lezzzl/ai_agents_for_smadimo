@@ -1,0 +1,89 @@
+{
+  "stage": "create_new_features",
+  "status": "success",
+  "result": {
+    "input_path": "artifacts/data_preparation/intermediate/01_casted.csv",
+    "output_path": "artifacts/data_preparation/intermediate/02_features.csv",
+    "target_column": "price",
+    "created_features": [
+      {
+        "name": "description_char_len",
+        "source_columns": [
+          "description"
+        ],
+        "reason": "Длина описания может отражать уровень детализации объявления и качество информации для модели."
+      },
+      {
+        "name": "description_word_count",
+        "source_columns": [
+          "description"
+        ],
+        "reason": "Число слов в описании дает простой сигнал о полноте текстового описания."
+      },
+      {
+        "name": "amenities_char_len",
+        "source_columns": [
+          "amenities"
+        ],
+        "reason": "Длина списка удобств может быть прокси для наполненности объекта."
+      },
+      {
+        "name": "amenities_item_count",
+        "source_columns": [
+          "amenities"
+        ],
+        "reason": "Количество удобств по разделителям отражает оснащенность жилья."
+      },
+      {
+        "name": "bathrooms_per_bedroom",
+        "source_columns": [
+          "bathrooms",
+          "bedrooms"
+        ],
+        "reason": "Соотношение ванных комнат к спальням может отражать уровень комфорта и планировку."
+      },
+      {
+        "name": "accommodates_per_bedroom",
+        "source_columns": [
+          "accommodates",
+          "bedrooms"
+        ],
+        "reason": "Число гостей на спальню показывает плотность размещения."
+      },
+      {
+        "name": "beds_per_bedroom",
+        "source_columns": [
+          "beds",
+          "bedrooms"
+        ],
+        "reason": "Отношение кроватей к спальням помогает оценить вместимость и удобство объекта."
+      },
+      {
+        "name": "availability_30_share",
+        "source_columns": [
+          "availability_30",
+          "availability_365"
+        ],
+        "reason": "Краткосрочная доступность относительно годовой показывает режим занятости объекта."
+      },
+      {
+        "name": "review_scores_avg_quality",
+        "source_columns": [
+          "review_scores_rating",
+          "review_scores_cleanliness"
+        ],
+        "reason": "Средняя оценка по качеству и общему рейтингу сглаживает шум отдельных метрик отзывов."
+      },
+      {
+        "name": "reviews_activity_ratio",
+        "source_columns": [
+          "number_of_reviews",
+          "reviews_per_month"
+        ],
+        "reason": "Соотношение общего числа отзывов и их частоты помогает оценить историю активности объекта."
+      }
+    ],
+    "skipped_features": [],
+    "warnings": []
+  }
+}

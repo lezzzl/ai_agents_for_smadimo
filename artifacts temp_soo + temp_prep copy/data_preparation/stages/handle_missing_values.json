@@ -1,0 +1,122 @@
+{
+  "stage": "handle_missing_values",
+  "status": "success",
+  "result": {
+    "input_path": "artifacts/data_preparation/intermediate/03_cleaned.csv",
+    "output_path": "artifacts/data_preparation/intermediate/04_no_missing.csv",
+    "target_column": "price",
+    "rows_before": 15000,
+    "rows_after": 15000,
+    "missing_actions": [
+      {
+        "column": "bathrooms",
+        "strategy": "median",
+        "missing_before": 5,
+        "missing_after": 0
+      },
+      {
+        "column": "bedrooms",
+        "strategy": "median",
+        "missing_before": 14,
+        "missing_after": 0
+      },
+      {
+        "column": "beds",
+        "strategy": "median",
+        "missing_before": 36,
+        "missing_after": 0
+      },
+      {
+        "column": "host_listings_count",
+        "strategy": "median",
+        "missing_before": 5,
+        "missing_after": 0
+      },
+      {
+        "column": "host_total_listings_count",
+        "strategy": "median",
+        "missing_before": 5,
+        "missing_after": 0
+      },
+      {
+        "column": "has_availability",
+        "strategy": "missing",
+        "missing_before": 150,
+        "missing_after": 0
+      },
+      {
+        "column": "review_scores_rating",
+        "strategy": "median",
+        "missing_before": 2921,
+        "missing_after": 0
+      },
+      {
+        "column": "review_scores_cleanliness",
+        "strategy": "median",
+        "missing_before": 2922,
+        "missing_after": 0
+      },
+      {
+        "column": "review_scores_location",
+        "strategy": "median",
+        "missing_before": 2922,
+        "missing_after": 0
+      },
+      {
+        "column": "review_scores_value",
+        "strategy": "median",
+        "missing_before": 2922,
+        "missing_after": 0
+      },
+      {
+        "column": "reviews_per_month",
+        "strategy": "median",
+        "missing_before": 2921,
+        "missing_after": 0
+      },
+      {
+        "column": "price",
+        "strategy": "drop_rows_with_missing_target",
+        "missing_before": 0,
+        "missing_after": 0
+      },
+      {
+        "column": "bathrooms_per_bedroom",
+        "strategy": "median",
+        "missing_before": 871,
+        "missing_after": 0
+      },
+      {
+        "column": "accommodates_per_bedroom",
+        "strategy": "median",
+        "missing_before": 866,
+        "missing_after": 0
+      },
+      {
+        "column": "beds_per_bedroom",
+        "strategy": "median",
+        "missing_before": 899,
+        "missing_after": 0
+      },
+      {
+        "column": "availability_30_share",
+        "strategy": "median",
+        "missing_before": 487,
+        "missing_after": 0
+      },
+      {
+        "column": "review_scores_avg_quality",
+        "strategy": "median",
+        "missing_before": 2921,
+        "missing_after": 0
+      },
+      {
+        "column": "reviews_activity_ratio",
+        "strategy": "median",
+        "missing_before": 2921,
+        "missing_after": 0
+      }
+    ],
+    "warnings": []
+  }
+}

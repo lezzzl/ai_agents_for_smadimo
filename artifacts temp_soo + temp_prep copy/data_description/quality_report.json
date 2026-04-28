@@ -1,0 +1,43 @@
+{
+  "missing_values": {
+    "bathrooms": 1,
+    "bedrooms": 1,
+    "review_scores_rating": 123,
+    "review_scores_cleanliness": 125,
+    "review_scores_location": 126,
+    "review_scores_value": 127,
+    "reviews_per_month": 130,
+    "first_review": 130,
+    "last_review": 130
+  },
+  "missing_values_total": 763,
+  "duplicate_rows": 0,
+  "constant_columns": [],
+  "high_cardinality_columns": [
+    "description",
+    "amenities",
+    "host_location"
+  ],
+  "numeric_outliers_iqr": {
+    "accommodates": 0,
+    "bathrooms": 0,
+    "bedrooms": 0,
+    "beds": 0,
+    "host_listings_count": 0,
+    "host_total_listings_count": 0,
+    "latitude": 0,
+    "longitude": 0,
+    "availability_30": 0,
+    "availability_60": 0,
+    "availability_90": 0,
+    "availability_365": 0,
+    "number_of_reviews": 0,
+    "number_of_reviews_ltm": 0,
+    "number_of_reviews_l30d": 0,
+    "review_scores_rating": 0,
+    "review_scores_cleanliness": 0,
+    "review_scores_location": 0,
+    "review_scores_value": 0,
+    "reviews_per_month": 0
+  }
+}

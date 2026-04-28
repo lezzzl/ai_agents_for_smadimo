@@ -1,0 +1,378 @@
+{
+  "stage": "schema_detection",
+  "status": "success",
+  "result": {
+    "target_column": "price",
+    "task_type": "regression",
+    "schema": {
+      "numeric": [
+        "accommodates",
+        "bathrooms",
+        "bedrooms",
+        "beds",
+        "host_listings_count",
+        "host_total_listings_count",
+        "latitude",
+        "longitude",
+        "availability_30",
+        "availability_60",
+        "availability_90",
+        "availability_365",
+        "number_of_reviews",
+        "number_of_reviews_ltm",
+        "number_of_reviews_l30d",
+        "review_scores_rating",
+        "review_scores_cleanliness",
+        "review_scores_location",
+        "review_scores_value",
+        "reviews_per_month"
+      ],
+      "categorical": [],
+      "text": [
+        "description",
+        "amenities",
+        "property_type",
+        "room_type",
+        "host_since",
+        "host_location",
+        "host_response_time",
+        "host_response_rate",
+        "host_acceptance_rate",
+        "host_is_superhost",
+        "city",
+        "has_availability",
+        "first_review",
+        "last_review"
+      ],
+      "datetime": [],
+      "boolean_like": [],
+      "id": [
+        "id"
+      ],
+      "target": [
+        "price"
+      ]
+    },
+    "column_profile": {
+      "id": {
+        "dtype": "int64",
+        "unique_non_null": 15000,
+        "missing": 0,
+        "missing_share": 0.0
+      },
+      "description": {
+        "dtype": "str",
+        "unique_non_null": 14202,
+        "missing": 356,
+        "missing_share": 0.023733333333333332,
+        "avg_str_len": 135.96135636869377,
+        "max_str_len": 1461,
+        "examples": [
+          "Fun! Huge 4 Bdrm Home in Mt. Adams, rooftop deck with city views.",
+          "This is a beautiful place in a great location near top attractions!",
+          "This is a beautiful place in a great location near top attractions!"
+        ]
+      },
+      "amenities": {
+        "dtype": "str",
+        "unique_non_null": 14880,
+        "missing": 0,
+        "missing_share": 0.0,
+        "avg_str_len": 314.7006,
+        "max_str_len": 1794,
+        "examples": [
+          "{\"TV\",\"Cable TV\",\"Wifi\",\"Air conditioning\",\"Kitchen\",\"Free parking on premises\",\"Elevator\",\"Heating\",\"Washer\",\"Dryer\",\"Smoke alarm\",\"Carbon monoxide alarm\",\"First aid kit\",\"Fire extinguisher\",\"Essentials\",\"Shampoo\",\"Hangers\",\"Hair dryer\",\"Iron\",\"Host greets you\"}",
+          "{\"TV\",\"Cable TV\",\"Wifi\",\"Air conditioning\",\"Kitchen\",\"Pets allowed\",\"Washer\",\"Dryer\",\"Smoke alarm\",\"Carbon monoxide alarm\",\"Fire extinguisher\",\"Essentials\",\"Shampoo\",\"Hangers\",\"Hair dryer\",\"Iron\"}",
+          "{\"TV\",\"Cable TV\",\"Wifi\",\"Air conditioning\",\"Kitchen\",\"Elevator\",\"Heating\",\"Washer\",\"Dryer\",\"Smoke alarm\",\"Carbon monoxide alarm\",\"First aid kit\",\"Fire extinguisher\",\"Essentials\",\"Hangers\",\"Hair dryer\",\"Iron\",\"Laptop friendly workspace\",\"Self check-in\",\"Lockbox\",\"Hot water\"}"
+        ]
+      },
+      "property_type": {
+        "dtype": "str",
+        "unique_non_null": 91,
+        "missing": 0,
+        "missing_share": 0.0,
+        "avg_str_len": 13.9468,
+        "max_str_len": 46,
+        "examples": [
+          "Entire rental unit",
+          "Private room in rental unit",
+          "Entire rental unit"
+        ]
+      },
+      "room_type": {
+        "dtype": "str",
+        "unique_non_null": 4,
+        "missing": 0,
+        "missing_share": 0.0,
+        "avg_str_len": 12.3144,
+        "max_str_len": 25,
+        "examples": [
+          "Private room",
+          "Private room",
+          "Entire home/apt"
+        ]
+      },
+      "accommodates": {
+        "dtype": "int64",
+        "unique_non_null": 16,
+        "missing": 0,
+        "missing_share": 0.0
+      },
+      "bathrooms": {
+        "dtype": "float64",
+        "unique_non_null": 21,
+        "missing": 5,
+        "missing_share": 0.0003333333333333333
+      },
+      "bedrooms": {
+        "dtype": "float64",
+        "unique_non_null": 14,
+        "missing": 14,
+        "missing_share": 0.0009333333333333333
+      },
+      "beds": {
+        "dtype": "float64",
+        "unique_non_null": 21,
+        "missing": 36,
+        "missing_share": 0.0024
+      },
+      "host_since": {
+        "dtype": "str",
+        "unique_non_null": 4564,
+        "missing": 5,
+        "missing_share": 0.0003333333333333333,
+        "avg_str_len": 10.0,
+        "max_str_len": 10,
+        "examples": [
+          "2013-02-14",
+          "2019-04-05",
+          "2015-05-10"
+        ]
+      },
+      "host_location": {
+        "dtype": "str",
+        "unique_non_null": 1935,
+        "missing": 3887,
+        "missing_share": 0.2591333333333333,
+        "avg_str_len": 18.12416347973682,
+        "max_str_len": 67,
+        "examples": [
+          "Mansfield, Ohio, United States",
+          "Marietta, Ohio, United States",
+          "Fayetteville, West Virginia, United States"
+        ]
+      },
+      "host_response_time": {
+        "dtype": "str",
+        "unique_non_null": 4,
+        "missing": 2301,
+        "missing_share": 0.1534,
+        "avg_str_len": 18.628002925861512,
+        "max_str_len": 25,
+        "examples": [
+          "within a day",
+          "within a few hours",
+          "within a few hours"
+        ]
+      },
+      "host_response_rate": {
+        "dtype": "str",
+        "unique_non_null": 86,
+        "missing": 2301,
+        "missing_share": 0.1534,
+        "avg_str_len": 4.0,
+        "max_str_len": 4,
+        "examples": [
+          "100%",
+          "100%",
+          "100%"
+        ]
+      },
+      "host_acceptance_rate": {
+        "dtype": "str",
+        "unique_non_null": 101,
+        "missing": 1282,
+        "missing_share": 0.08546666666666666,
+        "avg_str_len": 4.0,
+        "max_str_len": 4,
+        "examples": [
+          "98%",
+          "100%",
+          "95%"
+        ]
+      },
+      "host_is_superhost": {
+        "dtype": "str",
+        "unique_non_null": 2,
+        "missing": 379,
+        "missing_share": 0.025266666666666666,
+        "avg_str_len": 2.6947509212906406,
+        "max_str_len": 3,
+        "examples": [
+          "f",
+          "t",
+          "f"
+        ]
+      },
+      "host_listings_count": {
+        "dtype": "float64",
+        "unique_non_null": 463,
+        "missing": 5,
+        "missing_share": 0.0003333333333333333
+      },
+      "host_total_listings_count": {
+        "dtype": "float64",
+        "unique_non_null": 557,
+        "missing": 5,
+        "missing_share": 0.0003333333333333333
+      },
+      "latitude": {
+        "dtype": "float64",
+        "unique_non_null": 14858,
+        "missing": 0,
+        "missing_share": 0.0
+      },
+      "longitude": {
+        "dtype": "float64",
+        "unique_non_null": 14867,
+        "missing": 0,
+        "missing_share": 0.0
+      },
+      "city": {
+        "dtype": "str",
+        "unique_non_null": 108,
+        "missing": 0,
+        "missing_share": 0.0,
+        "avg_str_len": 10.247733333333333,
+        "max_str_len": 32,
+        "examples": [
+          "Covington",
+          "Newport",
+          "Cincinnati"
+        ]
+      },
+      "has_availability": {
+        "dtype": "str",
+        "unique_non_null": 2,
+        "missing": 150,
+        "missing_share": 0.01,
+        "avg_str_len": 1.0,
+        "max_str_len": 1,
+        "examples": [
+          "t",
+          "t",
+          "t"
+        ]
+      },
+      "availability_30": {
+        "dtype": "int64",
+        "unique_non_null": 31,
+        "missing": 0,
+        "missing_share": 0.0
+      },
+      "availability_60": {
+        "dtype": "int64",
+        "unique_non_null": 61,
+        "missing": 0,
+        "missing_share": 0.0
+      },
+      "availability_90": {
+        "dtype": "int64",
+        "unique_non_null": 91,
+        "missing": 0,
+        "missing_share": 0.0
+      },
+      "availability_365": {
+        "dtype": "int64",
+        "unique_non_null": 366,
+        "missing": 0,
+        "missing_share": 0.0
+      },
+      "number_of_reviews": {
+        "dtype": "int64",
+        "unique_non_null": 508,
+        "missing": 0,
+        "missing_share": 0.0
+      },
+      "number_of_reviews_ltm": {
+        "dtype": "int64",
+        "unique_non_null": 140,
+        "missing": 0,
+        "missing_share": 0.0
+      },
+      "number_of_reviews_l30d": {
+        "dtype": "int64",
+        "unique_non_null": 21,
+        "missing": 0,
+        "missing_share": 0.0
+      },
+      "first_review": {
+        "dtype": "str",
+        "unique_non_null": 3226,
+        "missing": 2921,
+        "missing_share": 0.19473333333333334,
+        "avg_str_len": 10.0,
+        "max_str_len": 10,
+        "examples": [
+          "2016-08-15",
+          "2019-04-25",
+          "2021-11-07"
+        ]
+      },
+      "last_review": {
+        "dtype": "str",
+        "unique_non_null": 1239,
+        "missing": 2921,
+        "missing_share": 0.19473333333333334,
+        "avg_str_len": 10.0,
+        "max_str_len": 10,
+        "examples": [
+          "2023-06-28",
+          "2023-06-27",
+          "2023-05-24"
+        ]
+      },
+      "review_scores_rating": {
+        "dtype": "float64",
+        "unique_non_null": 135,
+        "missing": 2921,
+        "missing_share": 0.19473333333333334
+      },
+      "review_scores_cleanliness": {
+        "dtype": "float64",
+        "unique_non_null": 149,
+        "missing": 2922,
+        "missing_share": 0.1948
+      },
+      "review_scores_location": {
+        "dtype": "float64",
+        "unique_non_null": 139,
+        "missing": 2922,
+        "missing_share": 0.1948
+      },
+      "review_scores_value": {
+        "dtype": "float64",
+        "unique_non_null": 145,
+        "missing": 2922,
+        "missing_share": 0.1948
+      },
+      "reviews_per_month": {
+        "dtype": "float64",
+        "unique_non_null": 792,
+        "missing": 2921,
+        "missing_share": 0.19473333333333334
+      },
+      "price": {
+        "dtype": "float64",
+        "unique_non_null": 897,
+        "missing": 0,
+        "missing_share": 0.0
+      }
+    },
+    "schema_notes": [
+      "price identified as target by explicit column name",
+      "host_response_rate and host_acceptance_rate are string percentages",
+      "amenities and description treated as text"
+    ]
+  }
+}

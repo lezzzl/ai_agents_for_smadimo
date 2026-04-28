@@ -1,0 +1,40 @@
+{
+  "stage": "compare_models",
+  "status": "success",
+  "result": {
+    "best_job_id": "model_2",
+    "best_model_name": "RandomForestRegressor",
+    "best_model_path": "artifacts/modeling/models/model_2_RandomForestRegressor.joblib",
+    "best_metrics": {
+      "mae": 80.31982666666666,
+      "rmse": 128.19898135918763,
+      "r2": 0.5975028899098175
+    },
+    "primary_metric": "rmse",
+    "reason": "Selected model with the lowest rmse among successful models (128.19898135918763).",
+    "all_results": [
+      {
+        "job_id": "model_1",
+        "model_name": "Ridge",
+        "model_artifact_path": "artifacts/modeling/models/model_1_Ridge.joblib",
+        "metrics": {
+          "mae": 115.95130072213139,
+          "rmse": 176.7473722998243,
+          "r2": 0.23493285955464804
+        },
+        "status": "success"
+      },
+      {
+        "job_id": "model_2",
+        "model_name": "RandomForestRegressor",
+        "model_artifact_path": "artifacts/modeling/models/model_2_RandomForestRegressor.joblib",
+        "metrics": {
+          "mae": 80.31982666666666,
+          "rmse": 128.19898135918763,
+          "r2": 0.5975028899098175
+        },
+        "status": "success"
+      }
+    ]
+  }
+}

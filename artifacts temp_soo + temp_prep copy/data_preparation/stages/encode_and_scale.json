@@ -1,0 +1,199 @@
+{
+  "stage": "encode_and_scale",
+  "status": "success",
+  "result": {
+    "input_path": "artifacts/data_preparation/intermediate/04_no_missing.csv",
+    "output_path": "artifacts/data_preparation/intermediate/05_encoded_scaled.csv",
+    "target_column": "price",
+    "target_scaled": false,
+    "target_encoded": false,
+    "target_unchanged": true,
+    "encoding_actions": [
+      {
+        "column": "has_availability",
+        "strategy": "boolean_mapping",
+        "n_unique": 3,
+        "created_columns_count": 1
+      },
+      {
+        "column": "property_type",
+        "strategy": "frequency_encoding",
+        "n_unique": 91,
+        "created_columns_count": 1
+      },
+      {
+        "column": "room_type",
+        "strategy": "frequency_encoding",
+        "n_unique": 4,
+        "created_columns_count": 1
+      },
+      {
+        "column": "city",
+        "strategy": "frequency_encoding",
+        "n_unique": 108,
+        "created_columns_count": 1
+      }
+    ],
+    "scaling_actions": [
+      {
+        "column": "property_type",
+        "strategy": "standard_scaling",
+        "mean": 0.20782660444444445,
+        "std": 0.171482821664391
+      },
+      {
+        "column": "room_type",
+        "strategy": "standard_scaling",
+        "mean": 0.6517873155555557,
+        "std": 0.23925320593508456
+      },
+      {
+        "column": "accommodates",
+        "strategy": "standard_scaling",
+        "mean": 3.925,
+        "std": 2.4346474761930796
+      },
+      {
+        "column": "bathrooms",
+        "strategy": "standard_scaling",
+        "mean": 1.3935666666666666,
+        "std": 0.7814016970945368
+      },
+      {
+        "column": "bedrooms",
+        "strategy": "standard_scaling",
+        "mean": 1.6377333333333333,
+        "std": 1.114792744066009
+      },
+      {
+        "column": "beds",
+        "strategy": "standard_scaling",
+        "mean": 2.3133333333333335,
+        "std": 1.7554360015550425
+      },
+      {
+        "column": "host_listings_count",
+        "strategy": "standard_scaling",
+        "mean": 75.39966666666666,
+        "std": 418.55598884723764
+      },
+      {
+        "column": "host_total_listings_count",
+        "strategy": "standard_scaling",
+        "mean": 107.40753333333333,
+        "std": 555.6069591446058
+      },
+      {
+        "column": "latitude",
+        "strategy": "standard_scaling",
+        "mean": 32.49920121658138,
+        "std": 24.74704883660572
+      },
+      {
+        "column": "longitude",
+        "strategy": "standard_scaling",
+        "mean": -13.118328196896407,
+        "std": 71.55691335339262
+      },
+      {
+        "column": "city",
+        "strategy": "standard_scaling",
+        "mean": 0.023966933333333336,
+        "std": 0.02013811647200403
+      },
+      {
+        "column": "review_scores_rating",
+        "strategy": "standard_scaling",
+        "mean": 4.772695999999999,
+        "std": 0.34476382000436184
+      },
+      {
+        "column": "review_scores_cleanliness",
+        "strategy": "standard_scaling",
+        "mean": 4.7689,
+        "std": 0.3543125597548018
+      },
+      {
+        "column": "review_scores_location",
+        "strategy": "standard_scaling",
+        "mean": 4.7990900000000005,
+        "std": 0.2972524267913272
+      },
+      {
+        "column": "review_scores_value",
+        "strategy": "standard_scaling",
+        "mean": 4.6874839999999995,
+        "std": 0.37585557919321444
+      },
+      {
+        "column": "reviews_per_month",
+        "strategy": "standard_scaling",
+        "mean": 1.330842,
+        "std": 1.5130485884584144
+      },
+      {
+        "column": "description_char_len",
+        "strategy": "standard_scaling",
+        "mean": 365.4508,
+        "std": 157.68768112747426
+      },
+      {
+        "column": "description_word_count",
+        "strategy": "standard_scaling",
+        "mean": 60.06353333333333,
+        "std": 26.09741552048572
+      },
+      {
+        "column": "amenities_char_len",
+        "strategy": "standard_scaling",
+        "mean": 596.9996666666667,
+        "std": 338.7030816706902
+      },
+      {
+        "column": "amenities_item_count",
+        "strategy": "standard_scaling",
+        "mean": 33.7824,
+        "std": 16.665184774653213
+      },
+      {
+        "column": "bathrooms_per_bedroom",
+        "strategy": "standard_scaling",
+        "mean": 0.92404791005291,
+        "std": 0.3982761060131784
+      },
+      {
+        "column": "accommodates_per_bedroom",
+        "strategy": "standard_scaling",
+        "mean": 2.389701243386243,
+        "std": 0.9335164267289776
+      },
+      {
+        "column": "beds_per_bedroom",
+        "strategy": "standard_scaling",
+        "mean": 1.3634637037037038,
+        "std": 0.7128648322199631
+      },
+      {
+        "column": "availability_30_share",
+        "strategy": "standard_scaling",
+        "mean": 0.11398427055339301,
+        "std": 0.1821284749549598
+      },
+      {
+        "column": "review_scores_avg_quality",
+        "strategy": "standard_scaling",
+        "mean": 4.768855000000001,
+        "std": 0.33042710337026937
+      },
+      {
+        "column": "reviews_activity_ratio",
+        "strategy": "standard_scaling",
+        "mean": 37.8076952414135,
+        "std": 32.800077591953844
+      }
+    ],
+    "warnings": [
+      "has_availability had unexpected values; filled unmapped values with 0 after boolean encoding."
+    ]
+  }
+}
