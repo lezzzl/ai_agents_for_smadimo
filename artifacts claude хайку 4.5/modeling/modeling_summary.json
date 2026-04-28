@@ -1,0 +1,85 @@
+{
+  "status": "success",
+  "task_type": "regression",
+  "target_column": "price",
+  "prepared_dataset_path": "artifacts/data_preparation/prepared_dataset.csv",
+  "models_tested": [
+    "Ridge",
+    "RandomForestRegressor"
+  ],
+  "best_model_name": "RandomForestRegressor",
+  "best_model_path": "artifacts/modeling/best_model.joblib",
+  "best_metrics": {
+    "mae": 79.80014228480316,
+    "rmse": 127.31512674028254,
+    "r2": 0.6030337075339114
+  },
+  "tuning_used": true,
+  "best_params": {
+    "max_depth": null,
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "n_estimators": 200
+  },
+  "baseline_best_metrics": {
+    "mae": 80.83373666666667,
+    "rmse": 127.92240412075336,
+    "r2": 0.5992377158052336
+  },
+  "tuned_metrics": {
+    "mae": 79.80014228480316,
+    "rmse": 127.31512674028254,
+    "r2": 0.6030337075339114
+  },
+  "model_comparison": {
+    "best_job_id": "model_2",
+    "best_model_name": "RandomForestRegressor",
+    "best_model_path": "artifacts/modeling/models/model_2_RandomForestRegressor.joblib",
+    "best_metrics": {
+      "mae": 80.83373666666667,
+      "rmse": 127.92240412075336,
+      "r2": 0.5992377158052336
+    },
+    "primary_metric": "rmse",
+    "reason": "Model RandomForestRegressor has the lowest RMSE (127.9224) among all successful models",
+    "all_results": [
+      {
+        "job_id": "model_1",
+        "model_name": "Ridge",
+        "metrics": {
+          "mae": 114.96985784281433,
+          "rmse": 175.5172671617682,
+          "r2": 0.24554504671783928
+        }
+      },
+      {
+        "job_id": "model_2",
+        "model_name": "RandomForestRegressor",
+        "metrics": {
+          "mae": 80.83373666666667,
+          "rmse": 127.92240412075336,
+          "r2": 0.5992377158052336
+        }
+      }
+    ]
+  },
+  "tuning_result": {
+    "best_model_name": "RandomForestRegressor",
+    "tuned_model_path": "artifacts/modeling/tuned_models/tuned_RandomForestRegressor.joblib",
+    "tuned_metrics_path": "artifacts/modeling/tuned_models/tuned_RandomForestRegressor_metrics.json",
+    "best_params": {
+      "max_depth": null,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "n_estimators": 200
+    },
+    "metrics": {
+      "mae": 79.80014228480316,
+      "rmse": 127.31512674028254,
+      "r2": 0.6030337075339114
+    },
+    "n_train": 12000,
+    "n_test": 3000,
+    "warnings": []
+  }
+}

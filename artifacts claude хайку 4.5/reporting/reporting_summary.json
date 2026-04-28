@@ -1,0 +1,107 @@
+{
+  "project_name": "Прогнозирование цен на аренду Airbnb",
+  "task_type": "regression",
+  "target_column": "price",
+  "dataset_info": {
+    "n_rows": 15000,
+    "n_columns": 36,
+    "n_columns_after_preparation": 46,
+    "missing_values_original": 31176,
+    "missing_values_final": 0,
+    "duplicate_rows": 0
+  },
+  "feature_groups": {
+    "numeric": 20,
+    "categorical": 7,
+    "text": 3,
+    "datetime": 3,
+    "boolean_like": 1,
+    "id": 1
+  },
+  "data_preparation": {
+    "stages_completed": 6,
+    "new_features_created": 10,
+    "final_dataset_path": "artifacts/data_preparation/prepared_dataset.csv"
+  },
+  "modeling": {
+    "models_tested": [
+      "Ridge",
+      "RandomForestRegressor"
+    ],
+    "best_model": "RandomForestRegressor",
+    "best_model_path": "artifacts/modeling/best_model.joblib",
+    "tuned_model_path": "artifacts/modeling/tuned_models/tuned_RandomForestRegressor.joblib",
+    "tuning_used": true,
+    "train_test_split": {
+      "train_size": 12000,
+      "test_size": 3000
+    }
+  },
+  "best_metrics": {
+    "mae": 79.80014228480316,
+    "rmse": 127.31512674028254,
+    "r2": 0.6030337075339114
+  },
+  "best_params": {
+    "max_depth": null,
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "n_estimators": 200
+  },
+  "model_comparison": {
+    "ridge_mae": 114.96985784281433,
+    "ridge_rmse": 175.5172671617682,
+    "ridge_r2": 0.24554504671783928,
+    "randomforest_mae": 80.83373666666667,
+    "randomforest_rmse": 127.92240412075336,
+    "randomforest_r2": 0.5992377158052336,
+    "improvement_reason": "RandomForestRegressor имеет наименьший RMSE (127.92) среди всех протестированных моделей"
+  },
+  "tuning_improvement": {
+    "mae_improvement": 1.03,
+    "mae_improvement_percent": 1.27,
+    "rmse_improvement": 0.6,
+    "rmse_improvement_percent": 0.47,
+    "r2_improvement": 0.0038,
+    "r2_improvement_percent": 0.63
+  },
+  "previous_run_comparison": {
+    "status": "identical",
+    "mae_change": 0,
+    "rmse_change": 0,
+    "r2_change": 0,
+    "note": "Текущие результаты совпадают с предыдущим запуском"
+  },
+  "artifacts": {
+    "final_report": "artifacts/reporting/final_report.md",
+    "reporting_summary": "artifacts/reporting/reporting_summary.json",
+    "prepared_dataset": "artifacts/data_preparation/prepared_dataset.csv",
+    "best_model": "artifacts/modeling/best_model.joblib",
+    "tuned_model": "artifacts/modeling/tuned_models/tuned_RandomForestRegressor.joblib",
+    "final_metrics": "artifacts/modeling/final_metrics.json"
+  },
+  "business_insights": {
+    "mae_interpretation": "Модель ошибается в среднем на ±79.80 единиц при прогнозировании цены",
+    "r2_interpretation": "Модель объясняет 60.3% вариации цен; остальные 40% зависят от других факторов",
+    "use_cases": [
+      "Рекомендация оптимальной цены для новых объектов",
+      "Анализ конкурентоспособности существующих объектов",
+      "Оптимизация портфеля объектов",
+      "Выявление переоцененных и недооцененных объектов"
+    ],
+    "limitations": [
+      "Не учитывает сезонность и события",
+      "Не включает информацию о репутации хозяина в социальных сетях",
+      "Точность модели ограничена 60% объясненной вариации"
+    ]
+  },
+  "recommendations": [
+    "Включить временные признаки (сезонность, дни недели)",
+    "Добавить информацию о событиях и праздниках",
+    "Использовать более сложные модели (градиентный бустинг, нейронные сети)",
+    "Собрать дополнительные признаки о репутации хозяина",
+    "Провести анализ выбросов и рассмотреть их отдельно"
+  ],
+  "status": "completed",
+  "ready_for_deployment": true
+}

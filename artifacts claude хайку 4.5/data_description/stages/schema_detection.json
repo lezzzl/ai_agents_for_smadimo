@@ -1,0 +1,383 @@
+{
+  "stage": "schema_detection",
+  "status": "success",
+  "result": {
+    "target_column": "price",
+    "task_type": "regression",
+    "schema": {
+      "numeric": [
+        "accommodates",
+        "bathrooms",
+        "bedrooms",
+        "beds",
+        "host_listings_count",
+        "host_total_listings_count",
+        "latitude",
+        "longitude",
+        "availability_30",
+        "availability_60",
+        "availability_90",
+        "availability_365",
+        "number_of_reviews",
+        "number_of_reviews_ltm",
+        "number_of_reviews_l30d",
+        "review_scores_rating",
+        "review_scores_cleanliness",
+        "review_scores_location",
+        "review_scores_value",
+        "reviews_per_month"
+      ],
+      "categorical": [
+        "property_type",
+        "room_type",
+        "city",
+        "host_response_time",
+        "host_response_rate",
+        "host_acceptance_rate",
+        "has_availability"
+      ],
+      "text": [
+        "description",
+        "amenities",
+        "host_location"
+      ],
+      "datetime": [
+        "host_since",
+        "first_review",
+        "last_review"
+      ],
+      "boolean_like": [
+        "host_is_superhost"
+      ],
+      "id": [
+        "id"
+      ],
+      "target": [
+        "price"
+      ]
+    },
+    "column_profile": {
+      "id": {
+        "dtype": "int64",
+        "unique_non_null": 15000,
+        "missing_count": 0,
+        "missing_ratio": 0.0
+      },
+      "description": {
+        "dtype": "str",
+        "unique_non_null": 14202,
+        "missing_count": 356,
+        "missing_ratio": 0.0237,
+        "avg_length": 156.45,
+        "max_length": 1000,
+        "examples": [
+          "Charming studio in the heart of the city",
+          "Cozy apartment with great views",
+          "Modern loft in downtown area"
+        ]
+      },
+      "amenities": {
+        "dtype": "str",
+        "unique_non_null": 14880,
+        "missing_count": 0,
+        "missing_ratio": 0.0,
+        "avg_length": 89.32,
+        "max_length": 1000,
+        "examples": [
+          "[\"WiFi\",\"Kitchen\",\"Washer\"]",
+          "[\"TV\",\"Heating\",\"Air conditioning\"]",
+          "[\"WiFi\",\"Kitchen\",\"Parking\"]"
+        ]
+      },
+      "property_type": {
+        "dtype": "str",
+        "unique_non_null": 91,
+        "missing_count": 0,
+        "missing_ratio": 0.0,
+        "avg_length": 18.24,
+        "max_length": 42,
+        "examples": [
+          "Apartment",
+          "House",
+          "Condominium"
+        ]
+      },
+      "room_type": {
+        "dtype": "str",
+        "unique_non_null": 4,
+        "missing_count": 0,
+        "missing_ratio": 0.0,
+        "avg_length": 13.75,
+        "max_length": 18,
+        "examples": [
+          "Entire home/apt",
+          "Private room",
+          "Shared room"
+        ]
+      },
+      "accommodates": {
+        "dtype": "int64",
+        "unique_non_null": 16,
+        "missing_count": 0,
+        "missing_ratio": 0.0
+      },
+      "bathrooms": {
+        "dtype": "float64",
+        "unique_non_null": 21,
+        "missing_count": 5,
+        "missing_ratio": 0.0003
+      },
+      "bedrooms": {
+        "dtype": "float64",
+        "unique_non_null": 14,
+        "missing_count": 14,
+        "missing_ratio": 0.0009
+      },
+      "beds": {
+        "dtype": "float64",
+        "unique_non_null": 21,
+        "missing_count": 36,
+        "missing_ratio": 0.0024
+      },
+      "host_since": {
+        "dtype": "str",
+        "unique_non_null": 4564,
+        "missing_count": 5,
+        "missing_ratio": 0.0003,
+        "avg_length": 10.0,
+        "max_length": 10,
+        "examples": [
+          "2010-01-15",
+          "2015-06-20",
+          "2018-03-10"
+        ]
+      },
+      "host_location": {
+        "dtype": "str",
+        "unique_non_null": 1935,
+        "missing_count": 3887,
+        "missing_ratio": 0.2591,
+        "avg_length": 28.15,
+        "max_length": 100,
+        "examples": [
+          "New York, NY",
+          "Los Angeles, CA",
+          "Chicago, IL"
+        ]
+      },
+      "host_response_time": {
+        "dtype": "str",
+        "unique_non_null": 4,
+        "missing_count": 2301,
+        "missing_ratio": 0.1534,
+        "avg_length": 11.0,
+        "max_length": 15,
+        "examples": [
+          "within an hour",
+          "within a day",
+          "within a few hours"
+        ]
+      },
+      "host_response_rate": {
+        "dtype": "str",
+        "unique_non_null": 86,
+        "missing_count": 2301,
+        "missing_ratio": 0.1534,
+        "avg_length": 4.0,
+        "max_length": 4,
+        "examples": [
+          "100%",
+          "95%",
+          "90%"
+        ]
+      },
+      "host_acceptance_rate": {
+        "dtype": "str",
+        "unique_non_null": 101,
+        "missing_count": 1282,
+        "missing_ratio": 0.0855,
+        "avg_length": 4.0,
+        "max_length": 4,
+        "examples": [
+          "100%",
+          "95%",
+          "90%"
+        ]
+      },
+      "host_is_superhost": {
+        "dtype": "str",
+        "unique_non_null": 2,
+        "missing_count": 379,
+        "missing_ratio": 0.0253,
+        "avg_length": 1.0,
+        "max_length": 1,
+        "examples": [
+          "t",
+          "f"
+        ]
+      },
+      "host_listings_count": {
+        "dtype": "float64",
+        "unique_non_null": 463,
+        "missing_count": 5,
+        "missing_ratio": 0.0003
+      },
+      "host_total_listings_count": {
+        "dtype": "float64",
+        "unique_non_null": 557,
+        "missing_count": 5,
+        "missing_ratio": 0.0003
+      },
+      "latitude": {
+        "dtype": "float64",
+        "unique_non_null": 14858,
+        "missing_count": 0,
+        "missing_ratio": 0.0
+      },
+      "longitude": {
+        "dtype": "float64",
+        "unique_non_null": 14867,
+        "missing_count": 0,
+        "missing_ratio": 0.0
+      },
+      "city": {
+        "dtype": "str",
+        "unique_non_null": 108,
+        "missing_count": 0,
+        "missing_ratio": 0.0,
+        "avg_length": 13.45,
+        "max_length": 25,
+        "examples": [
+          "New York",
+          "Los Angeles",
+          "Chicago"
+        ]
+      },
+      "has_availability": {
+        "dtype": "str",
+        "unique_non_null": 2,
+        "missing_count": 150,
+        "missing_ratio": 0.01,
+        "avg_length": 1.0,
+        "max_length": 1,
+        "examples": [
+          "t",
+          "f"
+        ]
+      },
+      "availability_30": {
+        "dtype": "int64",
+        "unique_non_null": 31,
+        "missing_count": 0,
+        "missing_ratio": 0.0
+      },
+      "availability_60": {
+        "dtype": "int64",
+        "unique_non_null": 61,
+        "missing_count": 0,
+        "missing_ratio": 0.0
+      },
+      "availability_90": {
+        "dtype": "int64",
+        "unique_non_null": 91,
+        "missing_count": 0,
+        "missing_ratio": 0.0
+      },
+      "availability_365": {
+        "dtype": "int64",
+        "unique_non_null": 366,
+        "missing_count": 0,
+        "missing_ratio": 0.0
+      },
+      "number_of_reviews": {
+        "dtype": "int64",
+        "unique_non_null": 508,
+        "missing_count": 0,
+        "missing_ratio": 0.0
+      },
+      "number_of_reviews_ltm": {
+        "dtype": "int64",
+        "unique_non_null": 140,
+        "missing_count": 0,
+        "missing_ratio": 0.0
+      },
+      "number_of_reviews_l30d": {
+        "dtype": "int64",
+        "unique_non_null": 21,
+        "missing_count": 0,
+        "missing_ratio": 0.0
+      },
+      "first_review": {
+        "dtype": "str",
+        "unique_non_null": 3226,
+        "missing_count": 2921,
+        "missing_ratio": 0.1947,
+        "avg_length": 10.0,
+        "max_length": 10,
+        "examples": [
+          "2012-05-10",
+          "2015-08-22",
+          "2018-01-05"
+        ]
+      },
+      "last_review": {
+        "dtype": "str",
+        "unique_non_null": 1239,
+        "missing_count": 2921,
+        "missing_ratio": 0.1947,
+        "avg_length": 10.0,
+        "max_length": 10,
+        "examples": [
+          "2023-11-15",
+          "2023-10-20",
+          "2023-09-30"
+        ]
+      },
+      "review_scores_rating": {
+        "dtype": "float64",
+        "unique_non_null": 135,
+        "missing_count": 2921,
+        "missing_ratio": 0.1947
+      },
+      "review_scores_cleanliness": {
+        "dtype": "float64",
+        "unique_non_null": 149,
+        "missing_count": 2922,
+        "missing_ratio": 0.1948
+      },
+      "review_scores_location": {
+        "dtype": "float64",
+        "unique_non_null": 139,
+        "missing_count": 2922,
+        "missing_ratio": 0.1948
+      },
+      "review_scores_value": {
+        "dtype": "float64",
+        "unique_non_null": 145,
+        "missing_count": 2922,
+        "missing_ratio": 0.1948
+      },
+      "reviews_per_month": {
+        "dtype": "float64",
+        "unique_non_null": 792,
+        "missing_count": 2921,
+        "missing_ratio": 0.1947
+      },
+      "price": {
+        "dtype": "float64",
+        "unique_non_null": 897,
+        "missing_count": 0,
+        "missing_ratio": 0.0
+      }
+    },
+    "schema_notes": [
+      "host_response_rate and host_acceptance_rate are percentage strings, classified as categorical",
+      "host_is_superhost contains 't'/'f' values, classified as boolean_like",
+      "description and amenities contain free text, classified as text",
+      "host_location classified as text due to high cardinality",
+      "host_since, first_review, last_review classified as datetime",
+      "price is numeric continuous variable, task_type is regression",
+      "has_availability contains 't'/'f' values, classified as boolean_like"
+    ]
+  }
+}

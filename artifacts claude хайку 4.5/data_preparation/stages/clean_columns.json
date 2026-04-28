@@ -1,0 +1,49 @@
+{
+  "stage": "clean_columns",
+  "status": "success",
+  "result": {
+    "input_path": "artifacts/data_preparation/intermediate/02_features.csv",
+    "output_path": "artifacts/data_preparation/intermediate/03_cleaned.csv",
+    "target_column": "price",
+    "dropped_columns": [
+      {
+        "name": "id",
+        "reason": "ID column should not be used for model training"
+      },
+      {
+        "name": "host_since",
+        "reason": "Raw datetime column; engineered features (host_experience_days, days_since_last_review) created from this"
+      },
+      {
+        "name": "first_review",
+        "reason": "Raw datetime column; engineered features (host_experience_days, days_since_last_review) created from this"
+      },
+      {
+        "name": "last_review",
+        "reason": "Raw datetime column; engineered features (host_experience_days, days_since_last_review) created from this"
+      },
+      {
+        "name": "description",
+        "reason": "Raw text column; engineered features (description_length, amenities_count) created from this"
+      },
+      {
+        "name": "amenities",
+        "reason": "Raw text column; engineered features (description_length, amenities_count) created from this"
+      },
+      {
+        "name": "host_location",
+        "reason": "Raw text column; engineered features (description_length, amenities_count) created from this"
+      },
+      {
+        "name": "city",
+        "reason": "High-cardinality categorical column (108 unique values); unlikely to generalize well"
+      },
+      {
+        "name": "host_acceptance_rate",
+        "reason": "High-cardinality categorical column (101 unique values); unlikely to generalize well"
+      }
+    ],
+    "kept_columns_notes": [],
+    "warnings": []
+  }
+}

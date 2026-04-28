@@ -1,0 +1,140 @@
+{
+  "stage": "handle_missing_values",
+  "status": "success",
+  "result": {
+    "input_path": "artifacts/data_preparation/intermediate/03_cleaned.csv",
+    "output_path": "artifacts/data_preparation/intermediate/04_no_missing.csv",
+    "target_column": "price",
+    "rows_before": 15000,
+    "rows_after": 15000,
+    "missing_actions": [
+      {
+        "column": "bathrooms",
+        "strategy": "median",
+        "missing_before": 5,
+        "missing_after": 0
+      },
+      {
+        "column": "bedrooms",
+        "strategy": "median",
+        "missing_before": 14,
+        "missing_after": 0
+      },
+      {
+        "column": "beds",
+        "strategy": "median",
+        "missing_before": 36,
+        "missing_after": 0
+      },
+      {
+        "column": "host_response_time",
+        "strategy": "missing_category",
+        "missing_before": 2301,
+        "missing_after": 0
+      },
+      {
+        "column": "host_response_rate",
+        "strategy": "missing_category",
+        "missing_before": 2301,
+        "missing_after": 0
+      },
+      {
+        "column": "host_is_superhost",
+        "strategy": "missing_category",
+        "missing_before": 379,
+        "missing_after": 0
+      },
+      {
+        "column": "host_listings_count",
+        "strategy": "median",
+        "missing_before": 5,
+        "missing_after": 0
+      },
+      {
+        "column": "host_total_listings_count",
+        "strategy": "median",
+        "missing_before": 5,
+        "missing_after": 0
+      },
+      {
+        "column": "has_availability",
+        "strategy": "missing_category",
+        "missing_before": 150,
+        "missing_after": 0
+      },
+      {
+        "column": "review_scores_rating",
+        "strategy": "median",
+        "missing_before": 2921,
+        "missing_after": 0
+      },
+      {
+        "column": "review_scores_cleanliness",
+        "strategy": "median",
+        "missing_before": 2922,
+        "missing_after": 0
+      },
+      {
+        "column": "review_scores_location",
+        "strategy": "median",
+        "missing_before": 2922,
+        "missing_after": 0
+      },
+      {
+        "column": "review_scores_value",
+        "strategy": "median",
+        "missing_before": 2922,
+        "missing_after": 0
+      },
+      {
+        "column": "reviews_per_month",
+        "strategy": "median",
+        "missing_before": 2921,
+        "missing_after": 0
+      },
+      {
+        "column": "total_capacity",
+        "strategy": "median",
+        "missing_before": 36,
+        "missing_after": 0
+      },
+      {
+        "column": "bedrooms_per_accommodates",
+        "strategy": "median",
+        "missing_before": 14,
+        "missing_after": 0
+      },
+      {
+        "column": "bathrooms_per_accommodates",
+        "strategy": "median",
+        "missing_before": 5,
+        "missing_after": 0
+      },
+      {
+        "column": "review_activity_ratio",
+        "strategy": "median",
+        "missing_before": 2921,
+        "missing_after": 0
+      },
+      {
+        "column": "host_experience_days",
+        "strategy": "median",
+        "missing_before": 5,
+        "missing_after": 0
+      },
+      {
+        "column": "days_since_last_review",
+        "strategy": "median",
+        "missing_before": 2921,
+        "missing_after": 0
+      },
+      {
+        "column": "review_scores_consistency",
+        "strategy": "median",
+        "missing_before": 2922,
+        "missing_after": 0
+      }
+    ],
+    "warnings": []
+  }
+}

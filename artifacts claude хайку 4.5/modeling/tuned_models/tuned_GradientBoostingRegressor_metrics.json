@@ -1,0 +1,1 @@
+{"best_params": {"learning_rate": 0.1, "max_depth": 3, "n_estimators": 100}, "metrics": {"mae": 84.49849015251706, "rmse": 133.56520016471092, "r2": 0.5631017990525746}, "n_train": 12000, "n_test": 3000}

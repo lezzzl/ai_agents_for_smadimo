@@ -1,0 +1,90 @@
+{
+  "stage": "create_new_features",
+  "status": "success",
+  "result": {
+    "input_path": "artifacts/data_preparation/intermediate/01_casted.csv",
+    "output_path": "artifacts/data_preparation/intermediate/02_features.csv",
+    "target_column": "price",
+    "created_features": [
+      {
+        "name": "total_capacity",
+        "source_columns": [
+          "accommodates",
+          "beds"
+        ],
+        "reason": "Product of accommodates and beds represents total sleeping capacity, which correlates with rental price"
+      },
+      {
+        "name": "bedrooms_per_accommodates",
+        "source_columns": [
+          "bedrooms",
+          "accommodates"
+        ],
+        "reason": "Ratio shows bedroom efficiency; higher ratio indicates more private spaces per guest"
+      },
+      {
+        "name": "bathrooms_per_accommodates",
+        "source_columns": [
+          "bathrooms",
+          "accommodates"
+        ],
+        "reason": "Ratio indicates bathroom comfort level; more bathrooms per guest increases rental value"
+      },
+      {
+        "name": "review_activity_ratio",
+        "source_columns": [
+          "reviews_per_month",
+          "availability_365"
+        ],
+        "reason": "Reviews per booked days indicates guest engagement and property popularity"
+      },
+      {
+        "name": "host_experience_days",
+        "source_columns": [
+          "host_since"
+        ],
+        "reason": "Longer-established hosts typically have better reviews and higher prices"
+      },
+      {
+        "name": "days_since_last_review",
+        "source_columns": [
+          "last_review"
+        ],
+        "reason": "Recently reviewed properties indicate active bookings and market demand"
+      },
+      {
+        "name": "review_scores_consistency",
+        "source_columns": [
+          "review_scores_rating",
+          "review_scores_cleanliness",
+          "review_scores_location",
+          "review_scores_value"
+        ],
+        "reason": "Lower std indicates consistent quality across all aspects; higher consistency suggests premium property"
+      },
+      {
+        "name": "booking_pressure",
+        "source_columns": [
+          "availability_365"
+        ],
+        "reason": "Days booked in a year indicates demand; higher booking pressure justifies higher prices"
+      },
+      {
+        "name": "description_length",
+        "source_columns": [
+          "description"
+        ],
+        "reason": "Longer descriptions indicate more effort in marketing; correlates with property quality and price"
+      },
+      {
+        "name": "amenities_count",
+        "source_columns": [
+          "amenities"
+        ],
+        "reason": "More amenities increase property value and rental price"
+      }
+    ],
+    "skipped_features": [],
+    "warnings": []
+  }
+}
